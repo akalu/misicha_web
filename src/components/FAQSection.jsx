@@ -75,7 +75,7 @@ export default function FAQSection() {
             <p className="text-xs text-stone-600">Escríbenos directamente a nuestro WhatsApp oficial y te responderemos con gusto.</p>
           </div>
           <a
-            href="https://wa.me/51992485174?text=Hola%20Misicha%2C%20tengo%20una%20consulta%20sobre..."
+            href="https://wa.me/51954778917?text=Hola%20Misicha%2C%20tengo%20una%20consulta%20sobre..."
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs shadow-xs shrink-0"

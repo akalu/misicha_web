@@ -298,7 +298,7 @@ export default function BingoSection() {
                       Envíanos un mensaje a nuestro WhatsApp con tu comprobante para enviarte tus cartones digitales con código de seguridad.
                     </p>
                     <a
-                      href={`https://wa.me/51992485174?text=${whatsappReservationMsg}`}
+                      href={`https://wa.me/51954778917?text=${whatsappReservationMsg}`}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-flex items-center justify-center gap-1.5 w-full py-2.5 px-4 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs shadow-md mt-2"

@@ -187,7 +187,7 @@ export default function DonationSection() {
                       {donationAccounts.yapePlin.phone}
                     </span>
                     <button
-                      onClick={() => copyToClipboard('992485174', 'phone')}
+                      onClick={() => copyToClipboard('954778917', 'phone')}
                       className="p-2 rounded-xl bg-orange-100 hover:bg-orange-200 text-michi-700 transition-colors shadow-xs"
                       title="Copiar número"
                     >
@@ -209,7 +209,7 @@ export default function DonationSection() {
 
                 <div className="pt-2">
                   <a
-                    href="https://wa.me/51992485174?text=Hola%20Misicha%2C%20adjunto%20mi%20constancia%20de%20donaci%C3%B3n%20para%20los%20gatitos."
+                    href="https://wa.me/51954778917?text=Hola%20Misicha%2C%20adjunto%20mi%20constancia%20de%20donaci%C3%B3n%20para%20los%20gatitos."
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center justify-center gap-2 w-full py-3 px-4 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs sm:text-sm shadow-md"
@@ -333,7 +333,7 @@ export default function DonationSection() {
                   </div>
 
                   <a
-                    href={`https://wa.me/51992485174?text=Hola%20Misicha%2C%20deseo%20apadrinar%20con%20el%20plan%20*${encodeURIComponent(plan.title)}*`}
+                    href={`https://wa.me/51954778917?text=Hola%20Misicha%2C%20deseo%20apadrinar%20con%20el%20plan%20*${encodeURIComponent(plan.title)}*`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className={`mt-6 py-2.5 px-4 rounded-xl text-xs font-bold text-center block transition-all shadow-xs ${

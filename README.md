@@ -44,7 +44,7 @@ Basada directamente en el logo oficial `misicha_logo.jpg`:
    - Vitrina de ferias solidarias (*Michi Stand*) y rifas (*Michirrifas*).
 
 5. **Cómo Ayudar & Canales de Donación (Perú e Internacional):**
-   - **Yape y Plin:** Código QR escaneable y botón para copiar con un solo clic el número oficial (`992 485 174`).
+   - **Yape y Plin:** Código QR escaneable y botón para copiar con un solo clic el número oficial (`954 778 917`).
    - **Cuentas Bancarias:** BCP, BBVA, Interbank en Soles y Dólares con botones para copiar número de cuenta y CCI.
    - **Calculadora Interactiva de Impacto Solidario:** Deslizador para ver qué se logra con S/ 20, S/ 50, S/ 80 o S/ 150+.
    - **Michi Padrino:** Planes de apadrinamiento mensual (Nutrición, Salud, Ángel Guardián).

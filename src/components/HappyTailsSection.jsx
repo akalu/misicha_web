@@ -76,7 +76,7 @@ export default function HappyTailsSection() {
         {/* Send your story CTA */}
         <div className="mt-12 text-center">
           <a
-            href="https://wa.me/51992485174?text=Hola%20Misicha%2C%20quisiera%20compartir%20fotos%20y%20la%20historia%20de%20mi%20michi%20adoptado%20para%20sus%20redes."
+            href="https://wa.me/51954778917?text=Hola%20Misicha%2C%20quisiera%20compartir%20fotos%20y%20la%20historia%20de%20mi%20michi%20adoptado%20para%20sus%20redes."
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 text-xs sm:text-sm font-bold text-stone-600 hover:text-michi-600 transition-colors"

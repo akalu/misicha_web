@@ -206,7 +206,7 @@ export default function AdoptionModal({ cat, onClose }) {
                   ¡Quiero postular para adoptar a {cat.name}!
                 </button>
                 <a
-                  href={`https://wa.me/51992485174?text=${whatsappMessage}`}
+                  href={`https://wa.me/51954778917?text=${whatsappMessage}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center gap-2 py-3 px-4 rounded-xl text-stone-700 bg-stone-100 hover:bg-stone-200 font-bold text-sm"
@@ -232,7 +232,7 @@ export default function AdoptionModal({ cat, onClose }) {
                   
                   <div className="pt-4 flex flex-col sm:flex-row gap-3 justify-center">
                     <a
-                      href={`https://wa.me/51992485174?text=${whatsappMessage}`}
+                      href={`https://wa.me/51954778917?text=${whatsappMessage}`}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm shadow-md"

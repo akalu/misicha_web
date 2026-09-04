@@ -2,9 +2,9 @@ export const donationAccounts = {
   holder: 'ASOCIACIÓN MISICHA PERÚ',
   ruc: '20603418921',
   yapePlin: {
-    phone: '992 485 174',
+    phone: '954 778 917',
     name: 'Asociación Misicha Perú',
-    qrImage: 'https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=YAPE_MISICHA_992485174_ASOCIACION_MISICHA_PERU'
+    qrImage: 'https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=YAPE_MISICHA_954778917_ASOCIACION_MISICHA_PERU'
   },
   banks: [
     {

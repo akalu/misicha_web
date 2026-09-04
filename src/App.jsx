@@ -50,7 +50,7 @@ function App() {
       {/* Floating Quick Action WhatsApp Button */}
       <aside aria-label="Contacto rápido" className="fixed bottom-6 right-6 z-40 flex flex-col items-end gap-2">
         <a
-          href="https://wa.me/51992485174?text=¡Hola%20Asociación%20Misicha!%20Me%20gustaría%20recibir%20más%20información."
+          href="https://wa.me/51954778917?text=¡Hola%20Asociación%20Misicha!%20Me%20gustaría%20recibir%20más%20información."
           target="_blank"
           rel="noopener noreferrer"
           className="group flex items-center gap-2.5 bg-emerald-600 hover:bg-emerald-700 text-white pl-4 pr-5 py-3 rounded-full shadow-2xl transition-all duration-300 transform hover:scale-105"
