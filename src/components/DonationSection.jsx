@@ -91,65 +91,65 @@ export default function DonationSection() {
         </div>
 
         {/* Donation Channel Tabs */}
-        <div className="flex flex-wrap justify-center gap-2 mb-10">
+        <div className="flex flex-wrap justify-center gap-1.5 sm:gap-2 mb-10">
           <button
             onClick={() => setActiveTab('yape')}
-            className={`flex items-center gap-2 px-5 py-3 rounded-2xl text-xs sm:text-sm font-bold transition-all ${
+            className={`flex items-center gap-1.5 sm:gap-2 px-3.5 sm:px-5 py-2.5 sm:py-3 rounded-2xl text-xs sm:text-sm font-bold transition-all ${
               activeTab === 'yape'
                 ? 'bg-gradient-to-r from-purple-700 via-indigo-700 to-teal-500 text-white shadow-md'
                 : 'bg-stone-100 hover:bg-stone-200 text-stone-700'
             }`}
           >
-            <QrCode className="w-4 h-4" />
-            Yape & Plin (Perú)
+            <QrCode className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
+            <span>Yape & Plin</span>
           </button>
 
           <button
             onClick={() => setActiveTab('banks')}
-            className={`flex items-center gap-2 px-5 py-3 rounded-2xl text-xs sm:text-sm font-bold transition-all ${
+            className={`flex items-center gap-1.5 sm:gap-2 px-3.5 sm:px-5 py-2.5 sm:py-3 rounded-2xl text-xs sm:text-sm font-bold transition-all ${
               activeTab === 'banks'
                 ? 'bg-michi-500 text-white shadow-warm'
                 : 'bg-stone-100 hover:bg-stone-200 text-stone-700'
             }`}
           >
-            <Building className="w-4 h-4" />
-            Transferencias Bancarias (BCP / BBVA / Interbank)
+            <Building className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
+            <span>Cuentas Bancarias <span className="hidden md:inline">(BCP / BBVA / Interbank)</span></span>
           </button>
 
           <button
             onClick={() => setActiveTab('sponsor')}
-            className={`flex items-center gap-2 px-5 py-3 rounded-2xl text-xs sm:text-sm font-bold transition-all ${
+            className={`flex items-center gap-1.5 sm:gap-2 px-3.5 sm:px-5 py-2.5 sm:py-3 rounded-2xl text-xs sm:text-sm font-bold transition-all ${
               activeTab === 'sponsor'
                 ? 'bg-michi-500 text-white shadow-warm'
                 : 'bg-stone-100 hover:bg-stone-200 text-stone-700'
             }`}
           >
-            <Heart className="w-4 h-4" />
-            Apadrina un Michi
+            <Heart className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
+            <span>Apadrinar Michi</span>
           </button>
 
           <button
             onClick={() => setActiveTab('supplies')}
-            className={`flex items-center gap-2 px-5 py-3 rounded-2xl text-xs sm:text-sm font-bold transition-all ${
+            className={`flex items-center gap-1.5 sm:gap-2 px-3.5 sm:px-5 py-2.5 sm:py-3 rounded-2xl text-xs sm:text-sm font-bold transition-all ${
               activeTab === 'supplies'
                 ? 'bg-michi-500 text-white shadow-warm'
                 : 'bg-stone-100 hover:bg-stone-200 text-stone-700'
             }`}
           >
-            <Package className="w-4 h-4" />
-            Alimento & Puntos de Acopio
+            <Package className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
+            <span>Puntos de Acopio</span>
           </button>
 
           <button
             onClick={() => setActiveTab('paypal')}
-            className={`flex items-center gap-2 px-5 py-3 rounded-2xl text-xs sm:text-sm font-bold transition-all ${
+            className={`flex items-center gap-1.5 sm:gap-2 px-3.5 sm:px-5 py-2.5 sm:py-3 rounded-2xl text-xs sm:text-sm font-bold transition-all ${
               activeTab === 'paypal'
                 ? 'bg-blue-600 text-white shadow-md'
                 : 'bg-stone-100 hover:bg-stone-200 text-stone-700'
             }`}
           >
-            <Globe className="w-4 h-4" />
-            Donación Internacional (PayPal)
+            <Globe className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
+            <span>PayPal <span className="hidden sm:inline">(Extranjero)</span></span>
           </button>
         </div>
 

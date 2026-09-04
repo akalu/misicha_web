@@ -110,30 +110,30 @@ export default function Hero({ onExploreCats, onGoBingo }) {
               </div>
 
               {/* Floating Badge 1: Next Event */}
-              <div className="absolute -top-5 -left-4 sm:-left-6 bg-white rounded-2xl p-3.5 shadow-xl border border-orange-100 flex items-center gap-3 animate-soft-pulse">
-                <div className="w-11 h-11 rounded-xl bg-gradient-to-tr from-amber-500 to-red-500 flex items-center justify-center text-white shadow-md">
-                  <Sparkles className="w-6 h-6" />
+              <div className="absolute -top-4 left-2 sm:-top-5 sm:-left-6 bg-white rounded-2xl p-2.5 sm:p-3.5 shadow-xl border border-orange-100 flex items-center gap-2.5 sm:gap-3 animate-soft-pulse z-10">
+                <div className="w-9 h-9 sm:w-11 sm:h-11 rounded-xl bg-gradient-to-tr from-amber-500 to-red-500 flex items-center justify-center text-white shadow-md shrink-0">
+                  <Sparkles className="w-5 h-5 sm:w-6 sm:h-6" />
                 </div>
                 <div>
-                  <span className="text-[11px] font-black uppercase text-michi-600 tracking-wider">
+                  <span className="text-[10px] sm:text-[11px] font-black uppercase text-michi-600 tracking-wider">
                     ¡Actividad Próxima!
                   </span>
                   <p className="text-xs font-bold text-brand-dark">Michi Bingo Solidario</p>
-                  <p className="text-[10px] text-stone-500">Premios Smart TV y más</p>
+                  <p className="text-[10px] text-stone-500 hidden sm:block">Premios Smart TV y más</p>
                 </div>
               </div>
 
               {/* Floating Badge 2: Health & Safety */}
-              <div className="absolute -bottom-5 -right-4 sm:-right-6 bg-white rounded-2xl p-3.5 shadow-xl border border-orange-100 flex items-center gap-3">
-                <div className="w-11 h-11 rounded-xl bg-emerald-50 border border-emerald-200 flex items-center justify-center text-emerald-600 shadow-xs">
-                  <ShieldCheck className="w-6 h-6" />
+              <div className="absolute -bottom-4 right-2 sm:-bottom-5 sm:-right-6 bg-white rounded-2xl p-2.5 sm:p-3.5 shadow-xl border border-orange-100 flex items-center gap-2.5 sm:gap-3 z-10">
+                <div className="w-9 h-9 sm:w-11 sm:h-11 rounded-xl bg-emerald-50 border border-emerald-200 flex items-center justify-center text-emerald-600 shadow-xs shrink-0">
+                  <ShieldCheck className="w-5 h-5 sm:w-6 sm:h-6" />
                 </div>
                 <div>
-                  <span className="text-[11px] font-black uppercase text-emerald-600 tracking-wider">
+                  <span className="text-[10px] sm:text-[11px] font-black uppercase text-emerald-600 tracking-wider">
                     Garantía Sanitaria
                   </span>
                   <p className="text-xs font-bold text-brand-dark">Cartilla al día</p>
-                  <p className="text-[10px] text-stone-500">Vacunados y desparasitados</p>
+                  <p className="text-[10px] text-stone-500 hidden sm:block">Vacunados y desparasitados</p>
                 </div>
               </div>
 
