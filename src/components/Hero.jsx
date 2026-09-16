@@ -84,8 +84,8 @@ export default function Hero({ onExploreCats, onGoBingo }) {
               {/* Main Image Container */}
               <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-amber-50 group">
                 <img
-                  src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?auto=format&fit=crop&w=1000&q=80"
-                  alt="Gatito rescatado por Asociación Misicha"
+                  src="/gatitos_para_adoptar/aurora.jpg"
+                  alt="Aurora - Gatita rescatada por Asociación Misicha"
                   className="w-full h-96 sm:h-[440px] object-cover object-center group-hover:scale-105 transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/80 via-transparent to-black/10" />
@@ -96,9 +96,9 @@ export default function Hero({ onExploreCats, onGoBingo }) {
                     <Heart className="w-3.5 h-3.5 text-red-400 fill-red-400" />
                     <span>Rescatada con amor</span>
                   </div>
-                  <h2 className="text-2xl font-bold font-display">Luna espera una familia</h2>
+                  <h2 className="text-2xl font-bold font-display">Aurora espera una familia</h2>
                   <p className="text-sm text-stone-200 mt-1 line-clamp-2">
-                    Cariñosa, esterilizada y acostumbrada a ronronear mientras trabajas en casa.
+                    Tricolor rescatada con una mancha negra en su carita. Cariñosa, esterilizada y lista para llenar tu hogar de amor.
                   </p>
                   <a
                     href="#adopciones"

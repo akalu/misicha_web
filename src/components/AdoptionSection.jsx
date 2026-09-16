@@ -1,16 +1,15 @@
 import React, { useState } from 'react';
 import { catsData, adoptionSteps } from '../data/catsData';
 import AdoptionModal from './AdoptionModal';
-import { Search, Heart, Sparkles, Filter, ShieldCheck, CheckCircle2, AlertCircle, ArrowRight } from 'lucide-react';
+import { Search, Heart, Sparkles, Filter, ShieldCheck, CheckCircle2, AlertCircle, ArrowRight, PawPrint } from 'lucide-react';
 
-export default function AdoptionSection() {
+export default function AdoptionSection({ onOpenAllCats }) {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');
   const [activeCatModal, setActiveCatModal] = useState(null);
 
   const categories = [
     { id: 'all', label: 'Todos los Michis' },
-    { id: 'kitten', label: 'Cachorros / Bebés' },
     { id: 'young', label: 'Jóvenes (1-2 años)' },
     { id: 'adult', label: 'Adultos (Tranquilos)' },
     { id: 'special', label: 'Casos Especiales' }
@@ -22,10 +21,14 @@ export default function AdoptionSection() {
     const matchesSearch =
       cat.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
       cat.color.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      (cat.observations && cat.observations.toLowerCase().includes(searchQuery.toLowerCase())) ||
       cat.personality.some((p) => p.toLowerCase().includes(searchQuery.toLowerCase())) ||
       cat.history.toLowerCase().includes(searchQuery.toLowerCase());
     return matchesCategory && matchesSearch;
   });
+
+  // Display only 8 featured cats on the home page as requested
+  const displayedCats = filteredCats.slice(0, 8);
 
   return (
     <section id="adopciones" className="py-16 sm:py-24 bg-white relative">
@@ -98,91 +101,109 @@ export default function AdoptionSection() {
             </button>
           </div>
         ) : (
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
-            {filteredCats.map((cat) => (
-              <div
-                key={cat.id}
-                className="bg-white rounded-3xl overflow-hidden border border-orange-100 shadow-sm hover:shadow-warm-lg transition-all duration-300 flex flex-col group"
-              >
-                {/* Image Container */}
-                <div className="relative h-60 overflow-hidden bg-stone-100">
-                  <img
-                    src={cat.photo}
-                    alt={cat.name}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-70" />
+          <>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+              {displayedCats.map((cat) => (
+                <div
+                  key={cat.id}
+                  className="bg-white rounded-3xl overflow-hidden border border-orange-100 shadow-sm hover:shadow-warm-lg transition-all duration-300 flex flex-col group"
+                >
+                  {/* Image Container */}
+                  <div className="relative h-60 overflow-hidden bg-stone-100">
+                    <img
+                      src={cat.photo}
+                      alt={cat.name}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-70" />
 
-                  {/* Top Badges */}
-                  <div className="absolute top-3 left-3 right-3 flex items-center justify-between">
-                    <span className="bg-white/90 backdrop-blur-xs text-stone-800 text-[11px] font-black px-2.5 py-1 rounded-full uppercase tracking-wider shadow-xs">
-                      {cat.gender} • {cat.age}
-                    </span>
-                    {cat.urgent ? (
-                      <span className="bg-red-500 text-white text-[10px] font-black px-2 py-0.5 rounded-full uppercase shadow-xs">
-                        Urgente
+                    {/* Top Badges */}
+                    <div className="absolute top-3 left-3 right-3 flex items-center justify-between">
+                      <span className="bg-white/90 backdrop-blur-xs text-stone-800 text-[11px] font-black px-2.5 py-1 rounded-full uppercase tracking-wider shadow-xs">
+                        {cat.gender} • {cat.age}
                       </span>
-                    ) : (
-                      <span className="bg-emerald-500 text-white text-[10px] font-bold px-2 py-0.5 rounded-full uppercase shadow-xs">
-                        Listo
-                      </span>
-                    )}
+                      {cat.urgent ? (
+                        <span className="bg-red-500 text-white text-[10px] font-black px-2 py-0.5 rounded-full uppercase shadow-xs">
+                          Urgente
+                        </span>
+                      ) : (
+                        <span className="bg-emerald-500 text-white text-[10px] font-bold px-2 py-0.5 rounded-full uppercase shadow-xs">
+                          Listo
+                        </span>
+                      )}
+                    </div>
+
+                    {/* Bottom overlay info */}
+                    <div className="absolute bottom-3 left-3 right-3 text-white">
+                      <h3 className="text-xl font-black font-display tracking-tight leading-none drop-shadow-sm">
+                        {cat.name}
+                      </h3>
+                      <p className="text-xs text-stone-200 mt-0.5">
+                        {cat.color}
+                      </p>
+                    </div>
                   </div>
 
-                  {/* Bottom overlay info */}
-                  <div className="absolute bottom-3 left-3 right-3 text-white">
-                    <h3 className="text-xl font-black font-display tracking-tight leading-none drop-shadow-sm">
-                      {cat.name}
-                    </h3>
-                    <p className="text-xs text-stone-200 mt-0.5">
-                      {cat.color}
+                  {/* Content */}
+                  <div className="p-5 flex-1 flex flex-col justify-between space-y-4">
+                    
+                    {/* Personality Chips */}
+                    <div className="flex flex-wrap gap-1.5">
+                      {cat.personality.slice(0, 3).map((p, i) => (
+                        <span
+                          key={i}
+                          className="px-2 py-0.5 rounded-md text-[11px] font-semibold bg-amber-50 text-amber-900 border border-amber-200/60"
+                        >
+                          {p}
+                        </span>
+                      ))}
+                    </div>
+
+                    {/* Short description */}
+                    <p className="text-xs text-stone-600 line-clamp-2 leading-relaxed">
+                      {cat.history}
                     </p>
-                  </div>
-                </div>
 
-                {/* Content */}
-                <div className="p-5 flex-1 flex flex-col justify-between space-y-4">
-                  
-                  {/* Personality Chips */}
-                  <div className="flex flex-wrap gap-1.5">
-                    {cat.personality.slice(0, 3).map((p, i) => (
-                      <span
-                        key={i}
-                        className="px-2 py-0.5 rounded-md text-[11px] font-semibold bg-amber-50 text-amber-900 border border-amber-200/60"
-                      >
-                        {p}
+                    {/* Health Guarantee Badges */}
+                    <div className="pt-2 border-t border-stone-100 flex items-center justify-between text-[11px] text-stone-500 font-medium">
+                      <span className="flex items-center gap-1 text-emerald-700">
+                        <CheckCircle2 className="w-3.5 h-3.5 text-emerald-500" /> Esterilizado
                       </span>
-                    ))}
+                      <span className="flex items-center gap-1 text-emerald-700">
+                        <ShieldCheck className="w-3.5 h-3.5 text-emerald-500" /> Vacunas OK
+                      </span>
+                    </div>
+
+                    {/* Action Button */}
+                    <button
+                      onClick={() => setActiveCatModal(cat)}
+                      className="w-full py-2.5 px-4 rounded-xl text-xs font-bold text-white bg-gradient-to-r from-michi-500 to-red-500 hover:from-michi-600 hover:to-red-600 shadow-xs hover:shadow-warm transition-all flex items-center justify-center gap-1.5"
+                    >
+                      <span>Conocer a {cat.name}</span>
+                      <ArrowRight className="w-3.5 h-3.5" />
+                    </button>
+
                   </div>
-
-                  {/* Short description */}
-                  <p className="text-xs text-stone-600 line-clamp-2 leading-relaxed">
-                    {cat.history}
-                  </p>
-
-                  {/* Health Guarantee Badges */}
-                  <div className="pt-2 border-t border-stone-100 flex items-center justify-between text-[11px] text-stone-500 font-medium">
-                    <span className="flex items-center gap-1 text-emerald-700">
-                      <CheckCircle2 className="w-3.5 h-3.5 text-emerald-500" /> Esterilizado
-                    </span>
-                    <span className="flex items-center gap-1 text-emerald-700">
-                      <ShieldCheck className="w-3.5 h-3.5 text-emerald-500" /> Vacunas OK
-                    </span>
-                  </div>
-
-                  {/* Action Button */}
-                  <button
-                    onClick={() => setActiveCatModal(cat)}
-                    className="w-full py-2.5 px-4 rounded-xl text-xs font-bold text-white bg-gradient-to-r from-michi-500 to-red-500 hover:from-michi-600 hover:to-red-600 shadow-xs hover:shadow-warm transition-all flex items-center justify-center gap-1.5"
-                  >
-                    <span>Conocer a {cat.name}</span>
-                    <ArrowRight className="w-3.5 h-3.5" />
-                  </button>
-
                 </div>
-              </div>
-            ))}
-          </div>
+              ))}
+            </div>
+
+            {/* View All Cats CTA Button */}
+            <div className="mt-12 text-center">
+              <button
+                type="button"
+                onClick={onOpenAllCats}
+                className="inline-flex items-center gap-3 px-8 py-4 rounded-2xl text-base sm:text-lg font-black text-white bg-gradient-to-r from-michi-500 via-orange-500 to-red-500 hover:from-michi-600 hover:to-red-600 shadow-warm hover:shadow-warm-lg transition-all transform hover:-translate-y-0.5 group cursor-pointer"
+              >
+                <PawPrint className="w-5 h-5" />
+                <span>Ver todos los gatitos ({catsData.length} en adopción)</span>
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </button>
+              <p className="text-xs text-stone-500 mt-2 font-medium">
+                Explora el catálogo completo con historias, observaciones y fotos reales de nuestros {catsData.length} rescatados.
+              </p>
+            </div>
+          </>
         )}
 
         {/* Netting Education Notice Banner */}

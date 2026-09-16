@@ -22,3 +22,8 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Data processing scripts
+parse_cats.py
+generate_cats_data.py
+all_cats_raw.json

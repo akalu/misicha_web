@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import AdoptionSection from './components/AdoptionSection';
+import AllCatsView from './components/AllCatsView';
 import BingoSection from './components/BingoSection';
 import DonationSection from './components/DonationSection';
 import AboutSection from './components/AboutSection';
@@ -12,36 +13,68 @@ import Footer from './components/Footer';
 import { Phone, Heart, Sparkles } from 'lucide-react';
 
 function App() {
+  const [currentView, setCurrentView] = useState('home'); // 'home' or 'catalog'
+
+  useEffect(() => {
+    const checkHash = () => {
+      if (window.location.hash === '#catalogo' || window.location.hash === '#todos-los-gatitos') {
+        setCurrentView('catalog');
+      } else {
+        setCurrentView('home');
+      }
+    };
+    checkHash();
+    window.addEventListener('hashchange', checkHash);
+    return () => window.removeEventListener('hashchange', checkHash);
+  }, []);
+
+  const openFullCatalog = () => {
+    window.location.hash = '#catalogo';
+    setCurrentView('catalog');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  const returnToHome = () => {
+    window.location.hash = '#adopciones';
+    setCurrentView('home');
+  };
+
   return (
     <div className="min-h-screen flex flex-col bg-brand-cream text-brand-dark selection:bg-michi-500 selection:text-white relative">
       {/* Top sticky Navbar */}
-      <Navbar />
+      <Navbar onOpenAllCats={openFullCatalog} />
 
       {/* Main Content Sections */}
       <main className="flex-grow">
-        {/* 1. Hero Section */}
-        <Hero />
+        {currentView === 'catalog' ? (
+          <AllCatsView onBack={returnToHome} />
+        ) : (
+          <>
+            {/* 1. Hero Section */}
+            <Hero />
 
-        {/* 2. Adoption Showcase (Gatitos en adopción) */}
-        <AdoptionSection />
+            {/* 2. Adoption Showcase (Gatitos en adopción - 8 destacados con botón a catálogo completo) */}
+            <AdoptionSection onOpenAllCats={openFullCatalog} />
 
-        {/* 3. Fundraising / Michi Bingo Section (Actividades de recaudación) */}
-        <BingoSection />
+            {/* 3. Fundraising / Michi Bingo Section (Actividades de recaudación) */}
+            <BingoSection />
 
-        {/* 4. Donations & Support (Yape, Plin, Bancos, Padrinos, Puntos de Acopio) */}
-        <DonationSection />
+            {/* 4. Donations & Support (Yape, Plin, Bancos, Padrinos, Puntos de Acopio) */}
+            <DonationSection />
 
-        {/* 5. About Us & Parque Universitario history */}
-        <AboutSection />
+            {/* 5. About Us & Parque Universitario history */}
+            <AboutSection />
 
-        {/* 6. Success Stories / Finales Felices */}
-        <HappyTailsSection />
+            {/* 6. Success Stories / Finales Felices */}
+            <HappyTailsSection />
 
-        {/* 7. Volunteer & Foster Home (Hogares temporales) */}
-        <VolunteerSection />
+            {/* 7. Volunteer & Foster Home (Hogares temporales) */}
+            <VolunteerSection />
 
-        {/* 8. Frequently Asked Questions */}
-        <FAQSection />
+            {/* 8. Frequently Asked Questions */}
+            <FAQSection />
+          </>
+        )}
       </main>
 
       {/* Footer */}

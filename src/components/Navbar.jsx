@@ -16,7 +16,7 @@ export default function Navbar({ onOpenAdoptionFilter, onOpenBingoModal }) {
 
   const navLinks = [
     { name: 'Inicio', href: '#inicio' },
-    { name: 'En Adopción', href: '#adopciones', badge: '8 michis' },
+    { name: 'En Adopción', href: '#adopciones', badge: '59 michis' },
     { name: 'Michi Bingo & Ferias', href: '#bingo-eventos', highlight: true },
     { name: 'Cómo Ayudar', href: '#donaciones' },
     { name: 'Nuestra Labor', href: '#nosotros' },

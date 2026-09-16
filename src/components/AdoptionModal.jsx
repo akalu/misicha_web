@@ -132,6 +132,13 @@ export default function AdoptionModal({ cat, onClose }) {
                 </p>
               </div>
 
+              {/* Shelter Observations */}
+              {cat.observations && (
+                <div className="bg-amber-50/90 border-l-4 border-amber-500 p-3 rounded-r-xl text-xs text-amber-950 font-medium">
+                  <strong>Observaciones del refugio:</strong> {cat.observations}
+                </div>
+              )}
+
               {/* Personality traits */}
               <div>
                 <h4 className="text-xs font-bold uppercase tracking-wider text-stone-400 mb-2">
