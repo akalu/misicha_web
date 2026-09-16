@@ -78,7 +78,7 @@ export const upcomingActivities = [
     title: 'Michirrifa: "Salud y Bienestar Felino"',
     date: 'Sorteo: 30 de Septiembre, 2025',
     time: 'S/ 5.00 el boleto',
-    location: 'Sorteo vía Instagram Live @asociacionmisichaperu',
+    location: 'Sorteo vía Instagram Live @misicha.peru',
     description: 'Sorteamos chequeos geriátricos, ecografías felinas y canastas de nutrición Royal Canin / Hills para tu engreído.',
     badgeColor: 'bg-amber-100 text-amber-800'
   },

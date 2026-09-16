@@ -1,5 +1,7 @@
 import React from 'react';
-import { Heart, Mail, Phone, MapPin, Facebook, Instagram, Send, ShieldCheck, Sparkles } from 'lucide-react';
+import { Heart, Mail, Phone, MapPin, Send, ShieldCheck, Sparkles } from 'lucide-react';
+import { socialLinks } from '../data/socialLinks';
+import SocialIcon from './SocialIcon';
 
 export default function Footer() {
   return (
@@ -47,35 +49,26 @@ export default function Footer() {
               </p>
             </div>
 
-            {/* Social icons */}
-            <div className="pt-2 flex items-center gap-3">
-              <a
-                href="https://facebook.com/asociacionmisichaperu"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-9 h-9 rounded-xl bg-stone-800 hover:bg-michi-500 text-stone-300 hover:text-white flex items-center justify-center transition-colors"
-                aria-label="Facebook Misicha"
-              >
-                <Facebook className="w-4 h-4" />
-              </a>
-              <a
-                href="https://instagram.com/asociacionmisichaperu"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-9 h-9 rounded-xl bg-stone-800 hover:bg-michi-500 text-stone-300 hover:text-white flex items-center justify-center transition-colors"
-                aria-label="Instagram Misicha"
-              >
-                <Instagram className="w-4 h-4" />
-              </a>
-              <a
-                href="https://wa.me/51954778917"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-9 h-9 rounded-xl bg-stone-800 hover:bg-emerald-600 text-stone-300 hover:text-white flex items-center justify-center transition-colors"
-                aria-label="WhatsApp Misicha"
-              >
-                <Phone className="w-4 h-4" />
-              </a>
+            {/* Redes Sociales Oficiales */}
+            <div className="pt-2">
+              <p className="text-[11px] font-bold uppercase tracking-wider text-stone-400 mb-2.5">
+                Síguenos en Redes Sociales:
+              </p>
+              <div className="flex flex-wrap items-center gap-2">
+                {socialLinks.map((s) => (
+                  <a
+                    key={s.id}
+                    href={s.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`w-9 h-9 rounded-xl bg-stone-800 text-stone-300 flex items-center justify-center transition-all duration-200 hover:scale-110 shadow-sm ${s.hoverClass}`}
+                    aria-label={s.ariaLabel}
+                    title={`${s.name} (${s.handle})`}
+                  >
+                    <SocialIcon id={s.id} className="w-4 h-4" />
+                  </a>
+                ))}
+              </div>
             </div>
           </div>
 
@@ -122,10 +115,15 @@ export default function Footer() {
                 <MapPin className="w-4 h-4 text-michi-500 shrink-0 mt-0.5" />
                 <span>Parque Universitario, Centro Histórico de Lima, Perú</span>
               </div>
-              <div className="flex items-center gap-2.5">
-                <Phone className="w-4 h-4 text-emerald-400 shrink-0" />
+              <a
+                href="https://wa.me/51954778917"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2.5 hover:text-emerald-400 transition-colors group"
+              >
+                <Phone className="w-4 h-4 text-emerald-400 shrink-0 group-hover:scale-110 transition-transform" />
                 <span>WhatsApp: +51 954 778 917</span>
-              </div>
+              </a>
               <div className="flex items-center gap-2.5">
                 <Mail className="w-4 h-4 text-amber-400 shrink-0" />
                 <span>contacto@misicha.org</span>

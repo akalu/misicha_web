@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Heart, Sparkles, Menu, X, Calendar, PawPrint, ChevronRight, Phone } from 'lucide-react';
+import { socialLinks } from '../data/socialLinks';
+import SocialIcon from './SocialIcon';
 
 export default function Navbar({ onOpenAdoptionFilter, onOpenBingoModal }) {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -194,6 +196,28 @@ export default function Navbar({ onOpenAdoptionFilter, onOpenBingoModal }) {
                 <Heart className="w-4 h-4 text-red-500 fill-red-500" />
                 Yapear o Donar a Misicha
               </a>
+            </div>
+
+            {/* Redes sociales oficiales */}
+            <div className="pt-3 border-t border-orange-100 text-center">
+              <p className="text-[10px] font-bold text-stone-400 uppercase tracking-wider mb-2">
+                Redes Oficiales Misicha:
+              </p>
+              <div className="flex items-center justify-center gap-2">
+                {socialLinks.map((s) => (
+                  <a
+                    key={s.id}
+                    href={s.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`w-8 h-8 rounded-lg bg-stone-100 text-stone-600 flex items-center justify-center transition-all ${s.hoverClass}`}
+                    aria-label={s.ariaLabel}
+                    title={s.name}
+                  >
+                    <SocialIcon id={s.id} className="w-3.5 h-3.5" />
+                  </a>
+                ))}
+              </div>
             </div>
           </div>
         )}
