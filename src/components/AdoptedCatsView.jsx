@@ -44,7 +44,7 @@ export default function AdoptedCatsView({ onBack, onOpenCatalog }) {
   return (
     <div className="min-h-screen bg-brand-marfil pt-6 pb-20 animate-fadeIn">
       {/* Top sticky navigation bar */}
-      <div className="sticky top-0 z-30 bg-brand-marfil/95 backdrop-blur-md border-b border-brand-peach/60 shadow-xs">
+      <div className="sticky top-0 z-30 bg-[#FFFCF7] border-b border-brand-peach shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between gap-4">
           <button
             onClick={onBack}

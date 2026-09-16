@@ -35,7 +35,7 @@ export default function Navbar({ onOpenAdoptionFilter, onOpenBingoModal }) {
   ];
 
   return (
-    <header className="sticky top-0 z-50 transition-all duration-200 will-change-transform">
+    <header className="sticky top-0 z-50 bg-[#FFFCF7] transition-all duration-200 shadow-xs">
       {/* Top Banner for Michi Bingo */}
       {showTopBar && (
         <div className="bg-gradient-to-r from-brand-orange to-amber-500 text-white text-xs sm:text-sm font-medium py-2 px-4 shadow-sm relative">
@@ -67,10 +67,10 @@ export default function Navbar({ onOpenAdoptionFilter, onOpenBingoModal }) {
 
       {/* Main Navbar */}
       <nav
-        className={`transition-all duration-200 ${
+        className={`transition-all duration-200 bg-[#FFFCF7] ${
           isScrolled
-            ? 'bg-[#FFFCF7]/98 shadow-md py-3 border-b border-brand-peach/60'
-            : 'bg-[#FFFCF7]/95 py-4 border-b border-brand-peach/40'
+            ? 'shadow-md py-3 border-b border-brand-peach'
+            : 'py-4 border-b border-brand-peach/50'
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -161,7 +161,7 @@ export default function Navbar({ onOpenAdoptionFilter, onOpenBingoModal }) {
 
         {/* Mobile Dropdown Menu */}
         {mobileMenuOpen && (
-          <div className="lg:hidden border-t border-brand-peach/60 bg-brand-marfil/95 backdrop-blur-md px-4 pt-3 pb-6 space-y-2 animate-fadeIn">
+          <div className="lg:hidden border-t border-brand-peach/60 bg-[#FFFCF7] shadow-lg px-4 pt-3 pb-6 space-y-2 animate-fadeIn">
             {navLinks.map((link) => (
               <a
                 key={link.name}
