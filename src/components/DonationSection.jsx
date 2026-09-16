@@ -161,11 +161,11 @@ export default function DonationSection() {
               {/* QR Code and Badges */}
               <div className="md:col-span-5 text-center">
                 <div className="bg-gradient-to-br from-purple-700 via-indigo-600 to-teal-500 p-4 rounded-3xl shadow-md inline-block">
-                  <div className="bg-white p-3 rounded-2xl">
+                  <div className="bg-white p-2.5 rounded-2xl shadow-inner">
                     <img
                       src={donationAccounts.yapePlin.qrImage}
-                      alt="QR Yape y Plin Misicha"
-                      className="w-48 h-48 mx-auto object-contain"
+                      alt="QR Oficial Yape Asociación Misicha Perú"
+                      className="w-48 h-48 mx-auto object-contain rounded-xl"
                     />
                   </div>
                   <div className="flex items-center justify-center gap-3 mt-3 text-white font-extrabold text-xs tracking-wider">
@@ -173,7 +173,17 @@ export default function DonationSection() {
                     <span className="bg-teal-900/60 px-2 py-0.5 rounded">PLIN</span>
                   </div>
                 </div>
-                <p className="text-[11px] text-stone-400 mt-2">Escanea desde tu app bancaria favorita</p>
+                <div className="mt-2.5 space-y-1">
+                  <p className="text-[11px] text-stone-500">QR Oficial de Asociación Misicha Perú</p>
+                  <a
+                    href={donationAccounts.yapePlin.fullFlyer}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[11px] font-bold text-michi-600 hover:text-michi-800 underline inline-block"
+                  >
+                    Ver flyer oficial completo ↗
+                  </a>
+                </div>
               </div>
 
               {/* Data & Copy button */}
@@ -201,10 +211,19 @@ export default function DonationSection() {
                   )}
                 </div>
 
-                <div className="p-4 rounded-2xl bg-stone-50 border border-stone-200 space-y-1 text-xs text-stone-700">
-                  <p><strong>Titular:</strong> {donationAccounts.holder}</p>
-                  <p><strong>RUC Institucional:</strong> {donationAccounts.ruc}</p>
-                  <p className="text-stone-500">Asociación Civil Sin Fines de Lucro registrada en SUNAT.</p>
+                <div className="p-4 rounded-2xl bg-stone-50 border border-stone-200 space-y-2 text-xs text-stone-700">
+                  <div className="flex items-start gap-2">
+                    <span className="bg-purple-100 text-purple-900 font-black px-2 py-0.5 rounded text-[10px]">YAPE</span>
+                    <span>A nombre de: <strong>{donationAccounts.yapePlin.name}</strong></span>
+                  </div>
+                  <div className="flex items-start gap-2">
+                    <span className="bg-teal-100 text-teal-900 font-black px-2 py-0.5 rounded text-[10px]">PLIN</span>
+                    <span>A nombre de: <strong>{donationAccounts.yapePlin.plinName}</strong></span>
+                  </div>
+                  <div className="pt-2 border-t border-stone-200 text-[11px] text-stone-500 flex flex-wrap items-center justify-between gap-1">
+                    <span><strong>RUC:</strong> {donationAccounts.ruc}</span>
+                    <span>Asociación Civil Sin Fines de Lucro</span>
+                  </div>
                 </div>
 
                 <div className="pt-2">
@@ -227,13 +246,18 @@ export default function DonationSection() {
         {/* Tab Content 2: Bank Accounts */}
         {activeTab === 'banks' && (
           <div className="max-w-4xl mx-auto space-y-4 animate-fadeIn">
-            <div className="p-4 rounded-2xl bg-orange-50 border border-orange-200 text-xs text-stone-700 flex items-center justify-between">
+            <div className="p-4 rounded-2xl bg-orange-50 border border-orange-200 text-xs text-stone-700 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2">
               <div>
                 <strong>Razón Social:</strong> {donationAccounts.holder} | <strong>RUC:</strong> {donationAccounts.ruc}
               </div>
-              <span className="text-[11px] text-michi-700 font-bold hidden sm:inline">
-                Cuentas directas de la asociación
-              </span>
+              <a
+                href={donationAccounts.banksFlyer}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-michi-700 hover:text-michi-900 font-bold underline flex items-center gap-1 shrink-0"
+              >
+                Ver volante oficial de cuentas ↗
+              </a>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -243,11 +267,18 @@ export default function DonationSection() {
                   className="bg-white rounded-2xl p-5 border border-stone-200 shadow-sm hover:border-orange-300 transition-all space-y-3"
                 >
                   <div className="flex items-center justify-between">
-                    <span className="text-sm font-extrabold text-stone-900">{b.bank}</span>
-                    <span className="text-xs font-bold px-2 py-0.5 bg-stone-100 rounded text-stone-600">
+                    <div>
+                      <span className="text-sm font-extrabold text-stone-900 block">{b.accountType}</span>
+                      <span className="text-[11px] text-stone-500 font-medium">{b.bank}</span>
+                    </div>
+                    <span className="text-xs font-bold px-2 py-0.5 bg-orange-100 text-michi-800 rounded">
                       {b.currency}
                     </span>
                   </div>
+
+                  <p className="text-xs text-stone-600 bg-stone-50 p-2 rounded-lg border border-stone-100">
+                    <strong>A nombre de:</strong> {b.holder}
+                  </p>
 
                   {/* Account number */}
                   <div className="bg-stone-50 p-3 rounded-xl border border-stone-100">

@@ -66,7 +66,7 @@ Basada directamente en el logo oficial `misicha_logo.jpg`:
    - Acordeón interactivo con respuestas a dudas sobre requisitos de adopción, mallas de protección, costos de recuperación veterinaria y bingos.
 
 10. **Pie de Página & Botón Flotante:**
-    - Información legal (RUC 20603418921, personería jurídica SUNARP), redes sociales, datos de contacto y horario de atención.
+    - Información legal (RUC 20601362491, personería jurídica SUNARP), redes sociales, datos de contacto y horario de atención.
     - Botón flotante directo de WhatsApp con animación de atención.
 
 ---

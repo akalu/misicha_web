@@ -1,38 +1,31 @@
 export const donationAccounts = {
   holder: 'ASOCIACIÓN MISICHA PERÚ',
-  ruc: '20603418921',
+  ruc: '20601362491',
   yapePlin: {
     phone: '954 778 917',
     name: 'Asociación Misicha Perú',
-    qrImage: '/yape_qr.jpeg'
+    plinName: 'Brigitte Díaz Flores',
+    qrImage: '/yape_qr_square.jpg',
+    fullFlyer: '/yape_qr_completo.jpg'
   },
+  banksFlyer: '/cuentas_bancarias.jpeg',
   banks: [
     {
       bank: 'Banco de Crédito del Perú (BCP)',
+      accountType: 'Cuenta de Ahorro BCP',
       currency: 'Soles (S/.)',
-      accountNumber: '193-94827102-0-45',
-      cci: '002-193-0094827102045-12',
+      holder: 'Asociación Misicha Perú',
+      accountNumber: '194-35553912-0-41',
+      cci: '00219413555391204197',
       color: 'border-blue-500 bg-blue-50/50'
-    },
-    {
-      bank: 'Banco de Crédito del Perú (BCP)',
-      currency: 'Dólares ($ USD)',
-      accountNumber: '193-94827108-1-51',
-      cci: '002-193-0094827108151-18',
-      color: 'border-blue-500 bg-blue-50/50'
-    },
-    {
-      bank: 'BBVA Continental',
-      currency: 'Soles (S/.)',
-      accountNumber: '0011-0175-0200847291',
-      cci: '011-175-000200847291-76',
-      color: 'border-sky-600 bg-sky-50/50'
     },
     {
       bank: 'Interbank',
+      accountType: 'Cuenta Corriente Interbank',
       currency: 'Soles (S/.)',
-      accountNumber: '200-3001894231',
-      cci: '003-200-003001894231-34',
+      holder: 'Asociación Misicha Perú',
+      accountNumber: '2003001796362',
+      cci: '00320000300179636237',
       color: 'border-emerald-600 bg-emerald-50/50'
     }
   ],

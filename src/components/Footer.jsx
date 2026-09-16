@@ -40,7 +40,7 @@ export default function Footer() {
             </p>
 
             <div className="pt-2 text-xs space-y-1 text-stone-400">
-              <p><strong>RUC:</strong> 20603418921</p>
+              <p><strong>RUC:</strong> 20601362491</p>
               <p><strong>Razón Social:</strong> Asociación Civil Misicha Perú</p>
               <p className="text-emerald-400 flex items-center gap-1">
                 <ShieldCheck className="w-3.5 h-3.5" /> Personería jurídica inscrita en SUNARP Lima
