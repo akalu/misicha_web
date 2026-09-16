@@ -160,6 +160,7 @@ export default function AllCatsView({ onBack }) {
                     src={cat.photo}
                     alt={cat.name}
                     loading="lazy"
+                    decoding="async"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent opacity-80" />

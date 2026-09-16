@@ -86,6 +86,9 @@ export default function Hero({ onExploreCats, onGoBingo }) {
                 <img
                   src="/gatitos_para_adoptar/aurora.jpg"
                   alt="Aurora - Gatita rescatada por Asociación Misicha"
+                  loading="eager"
+                  fetchPriority="high"
+                  decoding="async"
                   className="w-full h-96 sm:h-[440px] object-cover object-center group-hover:scale-105 transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/10" />

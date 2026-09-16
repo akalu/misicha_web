@@ -26,7 +26,7 @@ export default function DonationSection() {
   };
 
   return (
-    <section id="donaciones" className="py-16 sm:py-24 bg-brand-marfil relative">
+    <section id="donaciones" className="py-16 sm:py-24 bg-brand-marfil relative section-render-opt">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}
@@ -165,6 +165,8 @@ export default function DonationSection() {
                     <img
                       src={donationAccounts.yapePlin.qrImage}
                       alt="QR Oficial Yape Asociación Misicha Perú"
+                      loading="lazy"
+                      decoding="async"
                       className="w-48 h-48 mx-auto object-contain rounded-xl"
                     />
                   </div>

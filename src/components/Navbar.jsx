@@ -9,10 +9,18 @@ export default function Navbar({ onOpenAdoptionFilter, onOpenBingoModal }) {
   const [showTopBar, setShowTopBar] = useState(true);
 
   useEffect(() => {
+    let ticking = false;
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          const past = window.scrollY > 20;
+          setIsScrolled((prev) => (prev !== past ? past : prev));
+          ticking = false;
+        });
+        ticking = true;
+      }
     };
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -27,14 +35,14 @@ export default function Navbar({ onOpenAdoptionFilter, onOpenBingoModal }) {
   ];
 
   return (
-    <header className="sticky top-0 z-50 transition-all duration-300">
+    <header className="sticky top-0 z-50 transition-all duration-200 will-change-transform">
       {/* Top Banner for Michi Bingo */}
       {showTopBar && (
         <div className="bg-gradient-to-r from-brand-orange to-amber-500 text-white text-xs sm:text-sm font-medium py-2 px-4 shadow-sm relative">
           <div className="max-w-7xl mx-auto flex items-center justify-between">
             <div className="flex items-center gap-2 mx-auto sm:mx-0 overflow-hidden text-center sm:text-left">
               <span className="bg-white/20 px-2 py-0.5 rounded-full text-[11px] font-bold uppercase tracking-wider flex items-center gap-1 shrink-0 text-brand-vanilla">
-                <Sparkles className="w-3 h-3 text-brand-vanilla" /> Evento Solidario
+                <Sparkles className="w-3.5 h-3.5 text-brand-vanilla" /> Evento Solidario
               </span>
               <p className="truncate">
                 ¡Gran Michi Bingo 2025! Gana Smart TV 50", electrodomésticos y rascadores gigantes.
@@ -59,10 +67,10 @@ export default function Navbar({ onOpenAdoptionFilter, onOpenBingoModal }) {
 
       {/* Main Navbar */}
       <nav
-        className={`transition-all duration-300 ${
+        className={`transition-all duration-200 ${
           isScrolled
-            ? 'bg-brand-marfil/95 backdrop-blur-md shadow-md py-3 border-b border-brand-peach/60'
-            : 'bg-brand-marfil/90 backdrop-blur-sm py-4 border-b border-brand-peach/40'
+            ? 'bg-[#FFFCF7]/98 shadow-md py-3 border-b border-brand-peach/60'
+            : 'bg-[#FFFCF7]/95 py-4 border-b border-brand-peach/40'
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

@@ -47,7 +47,7 @@ export default function BingoSection() {
   );
 
   return (
-    <section id="bingo-eventos" className="py-16 sm:py-24 bg-gradient-to-b from-brand-marfil via-brand-bone/30 to-brand-marfil relative overflow-hidden">
+    <section id="bingo-eventos" className="py-16 sm:py-24 bg-gradient-to-b from-brand-marfil via-brand-bone/30 to-brand-marfil relative overflow-hidden section-render-opt">
       {/* Decorative background blurs */}
       <div className="absolute top-10 left-1/2 -translate-x-1/2 w-[800px] h-96 bg-brand-peach/20 blur-3xl pointer-events-none rounded-full" />
 

@@ -31,7 +31,7 @@ export default function AdoptionSection({ onOpenAllCats }) {
   const displayedCats = filteredCats.slice(0, 8);
 
   return (
-    <section id="adopciones" className="py-16 sm:py-24 bg-brand-marfil relative">
+    <section id="adopciones" className="py-16 sm:py-24 bg-brand-marfil relative section-render-opt">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
@@ -113,6 +113,8 @@ export default function AdoptionSection({ onOpenAllCats }) {
                     <img
                       src={cat.photo}
                       alt={cat.name}
+                      loading="lazy"
+                      decoding="async"
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-70" />

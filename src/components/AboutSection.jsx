@@ -26,7 +26,7 @@ export default function AboutSection() {
   ];
 
   return (
-    <section id="nosotros" className="py-16 sm:py-24 bg-gradient-to-b from-brand-marfil via-brand-bone/30 to-brand-marfil relative overflow-hidden">
+    <section id="nosotros" className="py-16 sm:py-24 bg-gradient-to-b from-brand-marfil via-brand-bone/30 to-brand-marfil relative overflow-hidden section-render-opt">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Top Story Block */}
@@ -40,6 +40,8 @@ export default function AboutSection() {
                   <img
                     src="https://images.unsplash.com/photo-1548802673-380ab8ebc7b7?auto=format&fit=crop&w=600&q=80"
                     alt="Voluntariado Misicha en Parque Universitario"
+                    loading="lazy"
+                    decoding="async"
                     className="w-full h-52 object-cover hover:scale-105 transition-transform duration-500"
                   />
                 </div>
@@ -62,6 +64,8 @@ export default function AboutSection() {
                   <img
                     src="https://images.unsplash.com/photo-1573865526739-10659fec78a5?auto=format&fit=crop&w=600&q=80"
                     alt="Gatitos atendidos por Misicha"
+                    loading="lazy"
+                    decoding="async"
                     className="w-full h-56 object-cover hover:scale-105 transition-transform duration-500"
                   />
                 </div>

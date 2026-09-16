@@ -186,6 +186,7 @@ export default function AdoptedCatsView({ onBack, onOpenCatalog }) {
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 cursor-pointer"
                       onClick={() => setActivePhotoModal(cat)}
                       loading="lazy"
+                      decoding="async"
                     />
 
                     {/* Gradient overlay on bottom of photo */}

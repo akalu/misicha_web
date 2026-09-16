@@ -4,7 +4,7 @@ import { Heart, Star, Sparkles, Camera, ArrowRight, CheckCircle2 } from 'lucide-
 
 export default function HappyTailsSection({ onOpenAdoptedCats }) {
   return (
-    <section id="historias" className="py-16 sm:py-24 bg-brand-marfil relative">
+    <section id="historias" className="py-16 sm:py-24 bg-brand-marfil relative section-render-opt">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}
@@ -39,6 +39,7 @@ export default function HappyTailsSection({ onOpenAdoptedCats }) {
                     alt={item.catName}
                     className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
                     loading="lazy"
+                    decoding="async"
                   />
                   <div className="absolute top-3 left-3 bg-brand-marfil/95 backdrop-blur-xs px-3 py-1 rounded-full text-[11px] font-black text-stone-800 shadow-xs flex items-center gap-1 border border-brand-peach/50">
                     <Heart className="w-3 h-3 text-brand-orange fill-brand-orange" />

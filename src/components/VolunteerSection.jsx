@@ -42,7 +42,7 @@ export default function VolunteerSection() {
   ];
 
   return (
-    <section id="voluntariado" className="py-16 sm:py-24 bg-gradient-to-b from-brand-marfil via-brand-bone/30 to-brand-marfil relative">
+    <section id="voluntariado" className="py-16 sm:py-24 bg-gradient-to-b from-brand-marfil via-brand-bone/30 to-brand-marfil relative section-render-opt">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}
