@@ -5,9 +5,9 @@ import SocialIcon from './SocialIcon';
 
 export default function Footer() {
   return (
-    <footer className="bg-brand-dark text-stone-300 pt-16 pb-12 border-t-4 border-michi-500 relative overflow-hidden">
+    <footer className="bg-brand-dark text-stone-300 pt-16 pb-12 border-t-4 border-brand-orange relative overflow-hidden">
       {/* Glow subtle background */}
-      <div className="absolute top-0 right-1/4 w-96 h-96 bg-michi-500/10 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute top-0 right-1/4 w-96 h-96 bg-brand-orange/10 rounded-full blur-3xl pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
@@ -20,14 +20,14 @@ export default function Footer() {
               <img
                 src="/misicha_logo.jpg"
                 alt="Logo Misicha Perú"
-                className="w-12 h-12 rounded-2xl object-cover border-2 border-amber-400 shadow-md"
+                className="w-12 h-12 rounded-2xl object-cover border-2 border-brand-peach shadow-md"
               />
               <div>
                 <div className="flex items-center gap-1.5">
                   <span className="text-2xl font-black text-white tracking-tight leading-none font-display">
                     misicha
                   </span>
-                  <span className="bg-gradient-to-r from-orange-500 to-red-500 text-white text-[10px] font-black uppercase px-1.5 py-0.5 rounded">
+                  <span className="bg-gradient-to-r from-brand-orange to-brand-coffee text-white text-[10px] font-black uppercase px-1.5 py-0.5 rounded">
                     PERÚ
                   </span>
                 </div>
@@ -51,7 +51,7 @@ export default function Footer() {
 
             {/* Redes Sociales Oficiales */}
             <div className="pt-2">
-              <p className="text-[11px] font-bold uppercase tracking-wider text-stone-400 mb-2.5">
+              <p className="text-[11px] font-bold uppercase tracking-wider text-brand-vanilla mb-2.5">
                 Síguenos en Redes Sociales:
               </p>
               <div className="flex flex-wrap items-center gap-2">
@@ -61,7 +61,7 @@ export default function Footer() {
                     href={s.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`w-9 h-9 rounded-xl bg-stone-800 text-stone-300 flex items-center justify-center transition-all duration-200 hover:scale-110 shadow-sm ${s.hoverClass}`}
+                    className={`w-9 h-9 rounded-xl bg-[#383838] text-stone-200 flex items-center justify-center transition-all duration-200 hover:scale-110 shadow-sm ${s.hoverClass}`}
                     aria-label={s.ariaLabel}
                     title={`${s.name} (${s.handle})`}
                   >
@@ -74,7 +74,7 @@ export default function Footer() {
 
           {/* Col 2: Navigation Links (2 cols) */}
           <div className="lg:col-span-2 space-y-3">
-            <h4 className="text-xs font-black uppercase tracking-wider text-amber-400 font-display">
+            <h4 className="text-xs font-black uppercase tracking-wider text-brand-vanilla font-display">
               Adopciones
             </h4>
             <ul className="space-y-2 text-xs text-stone-400">
@@ -88,17 +88,17 @@ export default function Footer() {
 
           {/* Col 3: Support & Events (3 cols) */}
           <div className="lg:col-span-3 space-y-3">
-            <h4 className="text-xs font-black uppercase tracking-wider text-amber-400 font-display">
+            <h4 className="text-xs font-black uppercase tracking-wider text-brand-vanilla font-display">
               Recaudación & Ayuda
             </h4>
             <ul className="space-y-2 text-xs text-stone-400">
               <li>
-                <a href="#bingo-eventos" className="hover:text-white transition-colors flex items-center gap-1.5 font-bold text-orange-400">
-                  <Sparkles className="w-3.5 h-3.5" /> Gran Michi Bingo 2025
+                <a href="#bingo-eventos" className="hover:text-white transition-colors flex items-center gap-1.5 font-bold text-brand-orange">
+                  <Sparkles className="w-3.5 h-3.5 text-brand-vanilla" /> Gran Michi Bingo 2025
                 </a>
               </li>
               <li><a href="#donaciones" className="hover:text-white transition-colors">Donar con Yape / Plin</a></li>
-              <li><a href="#donaciones" className="hover:text-white transition-colors">Cuentas BCP / BBVA</a></li>
+              <li><a href="#donaciones" className="hover:text-white transition-colors">Cuentas BCP / Interbank</a></li>
               <li><a href="#donaciones" className="hover:text-white transition-colors">Apadrina un Michi</a></li>
               <li><a href="#donaciones" className="hover:text-white transition-colors">Puntos de Acopio Lima</a></li>
               <li><a href="#voluntariado" className="hover:text-white transition-colors">Ser Voluntario</a></li>
@@ -107,12 +107,12 @@ export default function Footer() {
 
           {/* Col 4: Direct Contact (3 cols) */}
           <div className="lg:col-span-3 space-y-3">
-            <h4 className="text-xs font-black uppercase tracking-wider text-amber-400 font-display">
+            <h4 className="text-xs font-black uppercase tracking-wider text-brand-vanilla font-display">
               Contacto Oficial
             </h4>
             <div className="space-y-2 text-xs text-stone-400">
               <div className="flex items-start gap-2.5">
-                <MapPin className="w-4 h-4 text-michi-500 shrink-0 mt-0.5" />
+                <MapPin className="w-4 h-4 text-brand-orange shrink-0 mt-0.5" />
                 <span>Parque Universitario, Centro Histórico de Lima, Perú</span>
               </div>
               <a
@@ -125,13 +125,13 @@ export default function Footer() {
                 <span>WhatsApp: +51 954 778 917</span>
               </a>
               <div className="flex items-center gap-2.5">
-                <Mail className="w-4 h-4 text-amber-400 shrink-0" />
+                <Mail className="w-4 h-4 text-brand-vanilla shrink-0" />
                 <span>contacto@misicha.org</span>
               </div>
             </div>
 
-            <div className="p-3 rounded-xl bg-stone-900 border border-stone-800 text-[11px] text-stone-400 mt-3">
-              <strong className="text-stone-300">Horario de Atención voluntaria:</strong>
+            <div className="p-3 rounded-xl bg-[#202020] border border-stone-800 text-[11px] text-stone-400 mt-3">
+              <strong className="text-brand-vanilla">Horario de Atención voluntaria:</strong>
               <p>Lunes a Sábado de 10:00 am a 6:00 pm</p>
             </div>
           </div>

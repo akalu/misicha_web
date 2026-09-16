@@ -26,7 +26,7 @@ export default function AboutSection() {
   ];
 
   return (
-    <section id="nosotros" className="py-16 sm:py-24 bg-brand-cream/60 relative overflow-hidden">
+    <section id="nosotros" className="py-16 sm:py-24 bg-gradient-to-b from-brand-marfil via-brand-bone/30 to-brand-marfil relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Top Story Block */}
@@ -43,18 +43,18 @@ export default function AboutSection() {
                     className="w-full h-52 object-cover hover:scale-105 transition-transform duration-500"
                   />
                 </div>
-                <div className="rounded-3xl overflow-hidden shadow-md border-2 border-white bg-amber-500 p-6 text-white text-center">
+                <div className="rounded-3xl overflow-hidden shadow-md border-2 border-white bg-brand-orange p-6 text-white text-center">
                   <span className="text-3xl font-black font-display block">12+</span>
-                  <span className="text-xs font-bold uppercase tracking-wider block mt-1">
+                  <span className="text-xs font-bold uppercase tracking-wider block mt-1 text-brand-bone">
                     Años de compromiso ininterrumpido en Lima
                   </span>
                 </div>
               </div>
 
               <div className="space-y-4 pt-8">
-                <div className="rounded-3xl overflow-hidden shadow-md border-2 border-white bg-gradient-to-br from-michi-500 to-red-500 p-6 text-white">
-                  <Heart className="w-8 h-8 fill-white mb-2" />
-                  <p className="text-xs font-bold leading-relaxed">
+                <div className="rounded-3xl overflow-hidden shadow-md border-2 border-white bg-gradient-to-br from-brand-orange to-brand-coffee p-6 text-white">
+                  <Heart className="w-8 h-8 fill-white mb-2 text-brand-vanilla" />
+                  <p className="text-xs font-bold leading-relaxed text-brand-bone">
                     "Un país, una civilización se puede juzgar por la forma en que trata a sus animales."
                   </p>
                 </div>
@@ -69,9 +69,9 @@ export default function AboutSection() {
             </div>
 
             {/* Badge */}
-            <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 bg-white rounded-2xl px-5 py-2.5 shadow-lg border border-orange-100 flex items-center gap-2 whitespace-nowrap">
-              <MapPin className="w-4 h-4 text-red-500" />
-              <span className="text-xs font-bold text-stone-800">
+            <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 bg-[#FFFCF7] rounded-2xl px-5 py-2.5 shadow-lg border border-brand-peach flex items-center gap-2 whitespace-nowrap">
+              <MapPin className="w-4 h-4 text-brand-orange" />
+              <span className="text-xs font-bold text-brand-dark">
                 Parque Universitario • Cercado de Lima
               </span>
             </div>
@@ -79,8 +79,8 @@ export default function AboutSection() {
 
           {/* Text Story */}
           <div className="lg:col-span-6 space-y-6">
-            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-orange-100 text-michi-700 text-xs font-bold uppercase tracking-wider">
-              <Sparkles className="w-3.5 h-3.5" />
+            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-brand-vanilla text-brand-dark border border-brand-peach text-xs font-bold uppercase tracking-wider">
+              <Sparkles className="w-3.5 h-3.5 text-brand-orange" />
               <span>Nuestra Historia & Compromiso</span>
             </div>
 
@@ -88,7 +88,7 @@ export default function AboutSection() {
               Cuidando con dignidad a los gatos de Lima
             </h2>
 
-            <div className="space-y-4 text-stone-600 text-sm sm:text-base leading-relaxed">
+            <div className="space-y-4 text-brand-coffee text-sm sm:text-base leading-relaxed">
               <p>
                 La <strong>Asociación Misicha Perú</strong> nació como una respuesta de amor ciudadano ante la alarmante situación de abandono y sobrepoblación felina en el emblemático <strong>Parque Universitario</strong>, en el corazón del Centro Histórico de Lima.
               </p>
@@ -102,13 +102,13 @@ export default function AboutSection() {
 
             {/* Micro stats */}
             <div className="pt-2 grid grid-cols-2 gap-4">
-              <div className="p-4 rounded-2xl bg-white border border-orange-100">
-                <span className="text-2xl font-black text-michi-600 font-display block">40+ Gatos</span>
-                <span className="text-xs text-stone-500">Alimentados diariamente en el parque</span>
+              <div className="p-4 rounded-2xl bg-brand-bone border border-brand-peach/60">
+                <span className="text-2xl font-black text-brand-orange font-display block">40+ Gatos</span>
+                <span className="text-xs text-brand-coffee">Alimentados diariamente en el parque</span>
               </div>
-              <div className="p-4 rounded-2xl bg-white border border-orange-100">
-                <span className="text-2xl font-black text-emerald-600 font-display block">35 Voluntarios</span>
-                <span className="text-xs text-stone-500">En brigadas de salud y eventos</span>
+              <div className="p-4 rounded-2xl bg-brand-bone border border-brand-peach/60">
+                <span className="text-2xl font-black text-brand-coffee font-display block">35 Voluntarios</span>
+                <span className="text-xs text-brand-coffee/80">En brigadas de salud y eventos</span>
               </div>
             </div>
           </div>
@@ -118,7 +118,7 @@ export default function AboutSection() {
         {/* 4 Pillars Grid */}
         <div className="mt-16">
           <div className="text-center max-w-2xl mx-auto mb-10">
-            <span className="text-xs font-bold uppercase tracking-wider text-michi-600">
+            <span className="text-xs font-bold uppercase tracking-wider text-brand-orange">
               Metodología Ética
             </span>
             <h3 className="text-2xl sm:text-3xl font-black text-brand-dark font-display mt-1">
@@ -132,13 +132,13 @@ export default function AboutSection() {
               return (
                 <div
                   key={idx}
-                  className="bg-white rounded-3xl p-6 border border-orange-100 shadow-xs hover:shadow-md transition-all space-y-3"
+                  className="bg-[#FFFCF7] rounded-3xl p-6 border border-brand-peach/60 shadow-xs hover:border-brand-peach hover:shadow-md transition-all space-y-3"
                 >
-                  <div className="w-12 h-12 rounded-2xl bg-gradient-to-tr from-orange-500 to-amber-500 text-white flex items-center justify-center shadow-sm">
+                  <div className="w-12 h-12 rounded-2xl bg-brand-orange text-white flex items-center justify-center shadow-sm">
                     <Icon className="w-6 h-6" />
                   </div>
                   <h4 className="text-base font-bold text-brand-dark">{p.title}</h4>
-                  <p className="text-xs text-stone-600 leading-relaxed">{p.desc}</p>
+                  <p className="text-xs text-brand-coffee leading-relaxed">{p.desc}</p>
                 </div>
               );
             })}

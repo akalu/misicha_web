@@ -40,7 +40,7 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-brand-cream text-brand-dark selection:bg-michi-500 selection:text-white relative">
+    <div className="min-h-screen flex flex-col bg-brand-marfil text-brand-dark selection:bg-brand-orange selection:text-white relative">
       {/* Top sticky Navbar */}
       <Navbar onOpenAllCats={openFullCatalog} />
 
