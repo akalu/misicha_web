@@ -20,24 +20,31 @@ export default function VolunteerSection() {
   const volunteerRoles = [
     {
       id: 'parque',
-      title: 'Brigada de Parque Universitario',
-      badge: 'Presencial • Cercado de Lima',
+      title: 'Voluntarios Parque Universitario',
+      badge: 'Equipo Operativo Especializado',
       icon: Users,
-      desc: 'Participa en los turnos rotativos de alimentación diaria, supervisión del estado de salud de la colonia, cambio de agua limpia y reporte de casos de emergencia.'
+      desc: 'Nuestra brigada especializada en el Parque Universitario: turnos rotativos de alimentación higiénica, monitoreo de salud, rescates de emergencia y operativos de esterilización TNR.'
+    },
+    {
+      id: 'educacion',
+      title: 'Educación, Cultura & Sensibilización',
+      badge: 'Charlas, Ferias & Escuelas',
+      icon: Sparkles,
+      desc: 'Impulsa nuestra misión educativa: talleres escolares sobre bienestar animal, charlas de tenencia responsable en ferias ecológicas y campañas ciudadanas contra el abandono.'
     },
     {
       id: 'hogar',
       title: 'Michi Hogar Temporal (Tránsito)',
       badge: 'En tu domicilio',
       icon: Home,
-      desc: 'Acoge a un gatito recién rescatado o convaleciente durante 2 a 4 semanas mientras se recupera y encuentra familia definitiva. ¡Nosotros cubrimos su comida y gastos médicos!'
+      desc: 'Acoge a un gatito recién rescatado o en rehabilitación médica durante unas semanas mientras se recupera y encuentra familia. ¡Misicha cubre su alimento y gastos veterinarios!'
     },
     {
       id: 'difusion',
-      title: 'Logística, Redes & Michi Bingo',
-      badge: 'Virtual & Eventos',
-      icon: Sparkles,
-      desc: 'Apoya con fotografía de los michis en adopción, diseño gráfico, edición de videos para TikTok/Reels, o en el control de cartones y sorteos de nuestros bingos.'
+      title: 'Contenido Digital, Redes & Eventos',
+      badge: 'Virtual & Michi Bingo',
+      icon: Heart,
+      desc: 'Fotografía de michis en adopción, diseño gráfico, reels para TikTok/Instagram, y apoyo en la organización de nuestros eventos de recaudación y bingos solidarios.'
     }
   ];
 

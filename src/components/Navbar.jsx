@@ -92,7 +92,7 @@ export default function Navbar({ onOpenAdoptionFilter, onOpenBingoModal }) {
                   </span>
                 </div>
                 <span className="text-[11px] sm:text-xs text-stone-500 font-semibold tracking-wider uppercase">
-                  Asociación Civil Pro-Gatitos
+                  Educación & Bienestar Felino
                 </span>
               </div>
             </a>

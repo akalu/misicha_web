@@ -38,14 +38,14 @@ export default function Footer() {
             </div>
 
             <p className="text-xs text-stone-400 leading-relaxed">
-              Dedicados al rescate ético, esterilización comunitaria (TNR), rehabilitación clínica y reubicación en hogares responsables de gatos vulnerables del Parque Universitario y de la ciudad de Lima.
+              Organización civil sin fines de lucro dedicada a la <strong>educación, cultura y sensibilización</strong> en bienestar animal, y a la protección ética y rescate de felinos vulnerables de Lima junto a nuestro equipo operativo especializado de <strong>Voluntarios Parque Universitario</strong>.
             </p>
 
             <div className="pt-2 text-xs space-y-1 text-stone-400">
               <p><strong>RUC:</strong> 20601362491</p>
               <p><strong>Razón Social:</strong> Asociación Civil Misicha Perú</p>
               <p className="text-emerald-400 flex items-center gap-1">
-                <ShieldCheck className="w-3.5 h-3.5" /> Personería jurídica inscrita en SUNARP Lima
+                <ShieldCheck className="w-3.5 h-3.5" /> Personería jurídica inscrita en SUNARP Lima • Fines Educativos y Culturales
               </p>
             </div>
 

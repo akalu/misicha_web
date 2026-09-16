@@ -16,8 +16,8 @@ export const faqsData = [
     answer: 'Puedes adquirirlos directamente en nuestra web o enviando tu comprobante por WhatsApp. Tras confirmar tu abono (S/ 10 individual o 3 por S/ 25 en combo solidario), te enviamos tus cartones en PDF con serie única. El día del evento te conectas a la transmisión en vivo. El sistema cuenta con software auditor de números que canta los bingos en tiempo real.'
   },
   {
-    question: '¿Cómo puedo ser voluntario en el Parque Universitario?',
-    answer: 'Nuestros voluntarios se dividen en brigadas de alimentación diaria, control veterinario, rescate y logística de eventos. Para sumarte solo necesitas tener vocación de servicio, puntualidad en tus turnos asignados (mañana o tarde) y mucho cariño por los animales. Puedes postular en nuestra sección de Voluntariado.'
+    question: '¿Cómo puedo ser voluntario en la asociación o en el Parque Universitario?',
+    answer: 'Puedes sumarte en dos frentes complementarios: 1) Voluntarios Parque Universitario: brigada de campo para alimentación diaria, salud y operativos TNR. 2) Asociación Misicha Perú: educación escolar, talleres, contenidos digitales, diseño y logística de eventos. Postula desde nuestra sección de Voluntariado.'
   },
   {
     question: '¿Aceptan donaciones de alimento abierto o medicinas empezadas?',
