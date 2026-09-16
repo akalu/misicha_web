@@ -47,17 +47,17 @@ export default function VolunteerSection() {
         
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto space-y-4 mb-14">
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-brand-vanilla text-brand-dark border border-brand-peach text-xs font-bold uppercase tracking-wider">
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-brand-vanilla text-stone-800 border border-brand-peach text-xs font-bold uppercase tracking-wider">
             <Users className="w-3.5 h-3.5 text-brand-orange" />
             <span>Únete al Equipo Solidario</span>
           </div>
 
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-brand-dark tracking-tight font-display">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-stone-900 tracking-tight font-display">
             Sé parte de la familia Misicha: <br className="hidden sm:inline" />
             Tu tiempo puede salvar una vida
           </h2>
 
-          <p className="text-base text-brand-coffee">
+          <p className="text-base text-stone-600">
             No necesitas ser veterinario para hacer una diferencia real. Si tienes ganas de ayudar y compromiso de corazón, hay un lugar especial para ti en nuestras brigadas.
           </p>
         </div>
@@ -87,13 +87,13 @@ export default function VolunteerSection() {
                   >
                     <Icon className="w-6 h-6" />
                   </div>
-                  <span className="text-[11px] font-bold text-brand-coffee bg-brand-bone px-2.5 py-0.5 rounded-full border border-brand-peach/60">
+                  <span className="text-[11px] font-bold text-stone-600 bg-brand-bone px-2.5 py-0.5 rounded-full border border-brand-peach/60">
                     {role.badge}
                   </span>
                 </div>
 
-                <h3 className="text-lg font-bold text-brand-dark mb-2">{role.title}</h3>
-                <p className="text-xs text-brand-coffee leading-relaxed mb-4">{role.desc}</p>
+                <h3 className="text-lg font-bold text-stone-900 mb-2">{role.title}</h3>
+                <p className="text-xs text-stone-600 leading-relaxed mb-4">{role.desc}</p>
 
                 <div className="flex items-center gap-1 text-xs font-bold text-brand-orange">
                   <span className={`w-4 h-4 rounded-full border-2 flex items-center justify-center mr-1.5 ${
@@ -113,10 +113,10 @@ export default function VolunteerSection() {
           {volSubmitted ? (
             <div className="text-center py-6 space-y-3 animate-fadeIn">
               <CheckCircle2 className="w-12 h-12 text-emerald-600 mx-auto" />
-              <h4 className="text-2xl font-black text-brand-dark font-display">
+              <h4 className="text-2xl font-black text-stone-900 font-display">
                 ¡Gracias por tu vocación de servicio!
               </h4>
-              <p className="text-xs sm:text-sm text-brand-coffee leading-relaxed">
+              <p className="text-xs sm:text-sm text-stone-600 leading-relaxed">
                 Hemos registrado tus datos para el área seleccionada. Nuestro coordinador de voluntariado te contactará por WhatsApp para la próxima charla de inducción.
               </p>
               <button
@@ -129,17 +129,17 @@ export default function VolunteerSection() {
           ) : (
             <form onSubmit={handleSubmit} className="space-y-4">
               <div className="text-center mb-4">
-                <h3 className="text-xl font-black text-brand-dark font-display">
+                <h3 className="text-xl font-black text-stone-900 font-display">
                   Inscripción Rápida de Voluntarios
                 </h3>
-                <p className="text-xs text-brand-coffee">
+                <p className="text-xs text-stone-600">
                   Área elegida: <strong>{volunteerRoles.find(r => r.id === selectedRole)?.title}</strong>
                 </p>
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-xs font-bold text-brand-dark mb-1">
+                  <label className="block text-xs font-bold text-stone-800 mb-1">
                     Nombre y Apellidos *
                   </label>
                   <input
@@ -148,12 +148,12 @@ export default function VolunteerSection() {
                     value={volName}
                     onChange={(e) => setVolName(e.target.value)}
                     placeholder="Ej. Rodrigo Silva"
-                    className="w-full px-3.5 py-2.5 rounded-xl border border-brand-peach/60 text-xs focus:ring-2 focus:ring-brand-orange bg-brand-bone/30 text-brand-dark"
+                    className="w-full px-3.5 py-2.5 rounded-xl border border-brand-peach/60 text-xs focus:ring-2 focus:ring-brand-orange bg-brand-bone/30 text-stone-900"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-xs font-bold text-brand-dark mb-1">
+                  <label className="block text-xs font-bold text-stone-800 mb-1">
                     WhatsApp de Contacto *
                   </label>
                   <input
@@ -162,13 +162,13 @@ export default function VolunteerSection() {
                     value={volPhone}
                     onChange={(e) => setVolPhone(e.target.value)}
                     placeholder="Ej. 987 654 321"
-                    className="w-full px-3.5 py-2.5 rounded-xl border border-brand-peach/60 text-xs focus:ring-2 focus:ring-brand-orange bg-brand-bone/30 text-brand-dark"
+                    className="w-full px-3.5 py-2.5 rounded-xl border border-brand-peach/60 text-xs focus:ring-2 focus:ring-brand-orange bg-brand-bone/30 text-stone-900"
                   />
                 </div>
               </div>
 
               <div>
-                <label className="block text-xs font-bold text-brand-dark mb-1">
+                <label className="block text-xs font-bold text-stone-800 mb-1">
                   Distrito de Lima donde vives *
                 </label>
                 <input
@@ -177,7 +177,7 @@ export default function VolunteerSection() {
                   value={volDistrict}
                   onChange={(e) => setVolDistrict(e.target.value)}
                   placeholder="Ej. Cercado de Lima, Breña, Lince, Pueblo Libre..."
-                  className="w-full px-3.5 py-2.5 rounded-xl border border-brand-peach/60 text-xs focus:ring-2 focus:ring-brand-orange bg-brand-bone/30 text-brand-dark"
+                  className="w-full px-3.5 py-2.5 rounded-xl border border-brand-peach/60 text-xs focus:ring-2 focus:ring-brand-orange bg-brand-bone/30 text-stone-900"
                 />
               </div>
 

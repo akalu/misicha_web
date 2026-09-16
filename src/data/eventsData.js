@@ -69,7 +69,7 @@ export const upcomingActivities = [
     time: '10:00 AM - 6:00 PM',
     location: 'Parque de la Familia, Barranco, Lima',
     description: 'Encuentra merchandising exclusivo (tazas, tote bags, polos de gatos), recepción de donaciones de comida/arena y asesoría para adopciones.',
-    badgeColor: 'bg-brand-vanilla text-brand-dark border border-brand-peach'
+    badgeColor: 'bg-brand-vanilla text-stone-900 border border-brand-peach'
   },
   {
     id: 'michirrifa-veterinaria',
@@ -80,7 +80,7 @@ export const upcomingActivities = [
     time: 'S/ 5.00 el boleto',
     location: 'Sorteo vía Instagram Live @misicha.peru',
     description: 'Sorteamos chequeos geriátricos, ecografías felinas y canastas de nutrición Royal Canin / Hills para tu engreído.',
-    badgeColor: 'bg-brand-bone text-brand-coffee border border-brand-peach'
+    badgeColor: 'bg-brand-bone text-stone-800 border border-brand-peach'
   },
   {
     id: 'campana-esterilizacion',

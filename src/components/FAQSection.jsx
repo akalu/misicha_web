@@ -15,16 +15,16 @@ export default function FAQSection() {
         
         {/* Header */}
         <div className="text-center space-y-4 mb-14">
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-brand-bone border border-brand-peach text-brand-coffee text-xs font-bold uppercase tracking-wider">
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-brand-bone border border-brand-peach text-stone-700 text-xs font-bold uppercase tracking-wider">
             <HelpCircle className="w-3.5 h-3.5 text-brand-orange" />
             <span>Resuelve tus Dudas</span>
           </div>
 
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-brand-dark tracking-tight font-display">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-stone-900 tracking-tight font-display">
             Preguntas Frecuentes
           </h2>
 
-          <p className="text-base text-brand-dark/80">
+          <p className="text-base text-stone-600">
             Todo lo que necesitas saber sobre nuestros procesos de adopción, recaudación de fondos y labores comunitarias.
           </p>
         </div>
@@ -46,12 +46,12 @@ export default function FAQSection() {
                   onClick={() => toggleAccordion(idx)}
                   className="w-full p-5 sm:p-6 text-left flex items-center justify-between gap-4"
                 >
-                  <span className="font-bold text-sm sm:text-base text-brand-dark font-display">
+                  <span className="font-bold text-sm sm:text-base text-stone-900 font-display">
                     {faq.question}
                   </span>
                   <div
                     className={`w-8 h-8 rounded-full flex items-center justify-center shrink-0 transition-transform duration-200 ${
-                      isOpen ? 'rotate-180 bg-brand-orange text-white' : 'bg-brand-bone text-brand-coffee'
+                      isOpen ? 'rotate-180 bg-brand-orange text-white' : 'bg-brand-bone text-stone-600'
                     }`}
                   >
                     <ChevronDown className="w-4 h-4" />
@@ -59,7 +59,7 @@ export default function FAQSection() {
                 </button>
 
                 {isOpen && (
-                  <div className="px-5 pb-5 sm:px-6 sm:pb-6 text-xs sm:text-sm text-brand-dark/80 leading-relaxed border-t border-brand-peach/40 pt-3 animate-fadeIn">
+                  <div className="px-5 pb-5 sm:px-6 sm:pb-6 text-xs sm:text-sm text-stone-600 leading-relaxed border-t border-brand-peach/40 pt-3 animate-fadeIn">
                     {faq.answer}
                   </div>
                 )}
@@ -71,8 +71,8 @@ export default function FAQSection() {
         {/* Have more questions banner */}
         <div className="mt-12 p-6 rounded-3xl bg-brand-bone border border-brand-peach flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
           <div>
-            <h4 className="font-bold text-base text-brand-dark">¿Tienes otra consulta en mente?</h4>
-            <p className="text-xs text-brand-dark/70">Escríbenos directamente a nuestro WhatsApp oficial y te responderemos con gusto.</p>
+            <h4 className="font-bold text-base text-stone-900">¿Tienes otra consulta en mente?</h4>
+            <p className="text-xs text-stone-600">Escríbenos directamente a nuestro WhatsApp oficial y te responderemos con gusto.</p>
           </div>
           <a
             href="https://wa.me/51954778917?text=Hola%20Misicha%2C%20tengo%20una%20consulta%20sobre..."

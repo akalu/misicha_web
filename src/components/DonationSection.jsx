@@ -31,17 +31,17 @@ export default function DonationSection() {
         
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto space-y-4 mb-12">
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-brand-bone border border-brand-peach text-brand-coffee text-xs font-bold uppercase tracking-wider">
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-brand-bone border border-brand-peach text-stone-700 text-xs font-bold uppercase tracking-wider">
             <Heart className="w-3.5 h-3.5 fill-brand-orange text-brand-orange" />
             <span>Transparencia & Solidaridad</span>
           </div>
 
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-brand-dark tracking-tight font-display">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-stone-900 tracking-tight font-display">
             Cada donación se convierte en <br className="hidden sm:inline" />
             <span className="text-gradient-orange">salud, comida y segundas oportunidades</span>
           </h2>
 
-          <p className="text-base text-brand-dark/80">
+          <p className="text-base text-stone-600">
             Somos una asociación civil sin subsidios estatales. Nuestra labor se sostiene 100% gracias a personas de buen corazón como tú. Elige tu canal preferido para colaborar:
           </p>
         </div>
@@ -53,13 +53,13 @@ export default function DonationSection() {
               <span className="text-xs font-extrabold uppercase tracking-wider text-brand-orange">
                 Calculadora de Impacto Felino
               </span>
-              <h3 className="text-xl font-bold text-brand-dark">¿Qué logramos con tu aporte?</h3>
+              <h3 className="text-xl font-bold text-stone-900">¿Qué logramos con tu aporte?</h3>
             </div>
             <div className="text-left sm:text-right">
               <span className="text-3xl font-black text-brand-orange font-display">
                 S/ {impactAmount}
               </span>
-              <span className="text-xs text-brand-coffee/70 block">Soles peruanos</span>
+              <span className="text-xs text-stone-500 block">Soles peruanos</span>
             </div>
           </div>
 
@@ -73,7 +73,7 @@ export default function DonationSection() {
             className="w-full h-2.5 bg-brand-peach/60 rounded-lg appearance-none cursor-pointer accent-brand-orange"
           />
 
-          <div className="flex justify-between text-[11px] text-brand-coffee/80 mt-2 font-medium">
+          <div className="flex justify-between text-[11px] text-stone-500 mt-2 font-medium">
             <span>S/ 10</span>
             <span>S/ 50 (Vacunas)</span>
             <span>S/ 80 (Esterilización)</span>
@@ -84,7 +84,7 @@ export default function DonationSection() {
             <div className="w-10 h-10 rounded-xl bg-brand-bone border border-brand-peach/60 text-brand-orange flex items-center justify-center shrink-0">
               <Sparkles className="w-5 h-5" />
             </div>
-            <p className="text-xs sm:text-sm text-brand-dark font-medium">
+            <p className="text-xs sm:text-sm text-stone-800 font-medium">
               {getImpactDescription(impactAmount)}
             </p>
           </div>
@@ -97,7 +97,7 @@ export default function DonationSection() {
             className={`flex items-center gap-1.5 sm:gap-2 px-3.5 sm:px-5 py-2.5 sm:py-3 rounded-2xl text-xs sm:text-sm font-bold transition-all ${
               activeTab === 'yape'
                 ? 'bg-gradient-to-r from-purple-700 via-indigo-700 to-teal-500 text-white shadow-md'
-                : 'bg-brand-bone hover:bg-brand-peach/60 text-brand-coffee border border-brand-peach/60'
+                : 'bg-brand-bone hover:bg-brand-peach/60 text-stone-700 border border-brand-peach/60'
             }`}
           >
             <QrCode className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
@@ -109,7 +109,7 @@ export default function DonationSection() {
             className={`flex items-center gap-1.5 sm:gap-2 px-3.5 sm:px-5 py-2.5 sm:py-3 rounded-2xl text-xs sm:text-sm font-bold transition-all ${
               activeTab === 'banks'
                 ? 'bg-brand-orange text-white shadow-warm'
-                : 'bg-brand-bone hover:bg-brand-peach/60 text-brand-coffee border border-brand-peach/60'
+                : 'bg-brand-bone hover:bg-brand-peach/60 text-stone-700 border border-brand-peach/60'
             }`}
           >
             <Building className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
@@ -121,7 +121,7 @@ export default function DonationSection() {
             className={`flex items-center gap-1.5 sm:gap-2 px-3.5 sm:px-5 py-2.5 sm:py-3 rounded-2xl text-xs sm:text-sm font-bold transition-all ${
               activeTab === 'sponsor'
                 ? 'bg-brand-orange text-white shadow-warm'
-                : 'bg-brand-bone hover:bg-brand-peach/60 text-brand-coffee border border-brand-peach/60'
+                : 'bg-brand-bone hover:bg-brand-peach/60 text-stone-700 border border-brand-peach/60'
             }`}
           >
             <Heart className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
@@ -133,7 +133,7 @@ export default function DonationSection() {
             className={`flex items-center gap-1.5 sm:gap-2 px-3.5 sm:px-5 py-2.5 sm:py-3 rounded-2xl text-xs sm:text-sm font-bold transition-all ${
               activeTab === 'supplies'
                 ? 'bg-brand-orange text-white shadow-warm'
-                : 'bg-brand-bone hover:bg-brand-peach/60 text-brand-coffee border border-brand-peach/60'
+                : 'bg-brand-bone hover:bg-brand-peach/60 text-stone-700 border border-brand-peach/60'
             }`}
           >
             <Package className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
@@ -145,7 +145,7 @@ export default function DonationSection() {
             className={`flex items-center gap-1.5 sm:gap-2 px-3.5 sm:px-5 py-2.5 sm:py-3 rounded-2xl text-xs sm:text-sm font-bold transition-all ${
               activeTab === 'paypal'
                 ? 'bg-blue-600 text-white shadow-md'
-                : 'bg-brand-bone hover:bg-brand-peach/60 text-brand-coffee border border-brand-peach/60'
+                : 'bg-brand-bone hover:bg-brand-peach/60 text-stone-700 border border-brand-peach/60'
             }`}
           >
             <Globe className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
@@ -174,12 +174,12 @@ export default function DonationSection() {
                   </div>
                 </div>
                 <div className="mt-2.5 space-y-1">
-                  <p className="text-[11px] text-brand-coffee">QR Oficial de Asociación Misicha Perú</p>
+                  <p className="text-[11px] text-stone-600">QR Oficial de Asociación Misicha Perú</p>
                   <a
                     href={donationAccounts.yapePlin.fullFlyer}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-[11px] font-bold text-brand-orange hover:text-michi-600 underline inline-block"
+                    className="text-[11px] font-bold text-brand-orange hover:text-amber-600 underline inline-block"
                   >
                     Ver flyer oficial completo ↗
                   </a>
@@ -189,16 +189,16 @@ export default function DonationSection() {
               {/* Data & Copy button */}
               <div className="md:col-span-7 space-y-4">
                 <div className="space-y-1">
-                  <span className="text-xs font-bold text-brand-coffee/70 uppercase tracking-wider">
+                  <span className="text-xs font-bold text-stone-500 uppercase tracking-wider">
                     Número Celular Vinculado
                   </span>
                   <div className="flex items-center gap-3">
-                    <span className="text-3xl sm:text-4xl font-black text-brand-dark font-display tracking-wide">
+                    <span className="text-3xl sm:text-4xl font-black text-stone-900 font-display tracking-wide">
                       {donationAccounts.yapePlin.phone}
                     </span>
                     <button
                       onClick={() => copyToClipboard('954778917', 'phone')}
-                      className="p-2 rounded-xl bg-brand-bone hover:bg-brand-peach text-brand-coffee border border-brand-peach transition-colors shadow-xs"
+                      className="p-2 rounded-xl bg-brand-bone hover:bg-brand-peach text-stone-700 border border-brand-peach transition-colors shadow-xs"
                       title="Copiar número"
                     >
                       {copiedText === 'phone' ? <Check className="w-5 h-5 text-emerald-600" /> : <Copy className="w-5 h-5" />}
@@ -211,7 +211,7 @@ export default function DonationSection() {
                   )}
                 </div>
 
-                <div className="p-4 rounded-2xl bg-brand-bone/60 border border-brand-peach/80 space-y-2 text-xs text-brand-dark">
+                <div className="p-4 rounded-2xl bg-brand-bone/60 border border-brand-peach/80 space-y-2 text-xs text-stone-800">
                   <div className="flex items-start gap-2">
                     <span className="bg-purple-100 text-purple-900 font-black px-2 py-0.5 rounded text-[10px]">YAPE</span>
                     <span>A nombre de: <strong>{donationAccounts.yapePlin.name}</strong></span>
@@ -220,7 +220,7 @@ export default function DonationSection() {
                     <span className="bg-teal-100 text-teal-900 font-black px-2 py-0.5 rounded text-[10px]">PLIN</span>
                     <span>A nombre de: <strong>{donationAccounts.yapePlin.plinName}</strong></span>
                   </div>
-                  <div className="pt-2 border-t border-brand-peach/50 text-[11px] text-brand-coffee/80 flex flex-wrap items-center justify-between gap-1">
+                  <div className="pt-2 border-t border-brand-peach/50 text-[11px] text-stone-500 flex flex-wrap items-center justify-between gap-1">
                     <span><strong>RUC:</strong> {donationAccounts.ruc}</span>
                     <span>Asociación Civil Sin Fines de Lucro</span>
                   </div>
@@ -246,7 +246,7 @@ export default function DonationSection() {
         {/* Tab Content 2: Bank Accounts */}
         {activeTab === 'banks' && (
           <div className="max-w-4xl mx-auto space-y-4 animate-fadeIn">
-            <div className="p-4 rounded-2xl bg-brand-bone border border-brand-peach text-xs text-brand-dark flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2">
+            <div className="p-4 rounded-2xl bg-brand-bone border border-brand-peach text-xs text-stone-800 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2">
               <div>
                 <strong>Razón Social:</strong> {donationAccounts.holder} | <strong>RUC:</strong> {donationAccounts.ruc}
               </div>
@@ -254,7 +254,7 @@ export default function DonationSection() {
                 href={donationAccounts.banksFlyer}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-brand-orange hover:text-brand-coffee font-bold underline flex items-center gap-1 shrink-0"
+                className="text-brand-orange hover:text-amber-600 font-bold underline flex items-center gap-1 shrink-0"
               >
                 Ver volante oficial de cuentas ↗
               </a>
@@ -268,46 +268,46 @@ export default function DonationSection() {
                 >
                   <div className="flex items-center justify-between">
                     <div>
-                      <span className="text-sm font-extrabold text-brand-dark block">{b.accountType}</span>
-                      <span className="text-[11px] text-brand-coffee font-medium">{b.bank}</span>
+                      <span className="text-sm font-extrabold text-stone-900 block">{b.accountType}</span>
+                      <span className="text-[11px] text-stone-600 font-medium">{b.bank}</span>
                     </div>
-                    <span className="text-xs font-bold px-2 py-0.5 bg-brand-vanilla text-brand-coffee border border-brand-peach/60 rounded">
+                    <span className="text-xs font-bold px-2 py-0.5 bg-brand-vanilla text-stone-700 border border-brand-peach/60 rounded">
                       {b.currency}
                     </span>
                   </div>
 
-                  <p className="text-xs text-brand-dark bg-brand-bone p-2 rounded-lg border border-brand-peach/50">
+                  <p className="text-xs text-stone-800 bg-brand-bone p-2 rounded-lg border border-brand-peach/50">
                     <strong>A nombre de:</strong> {b.holder}
                   </p>
 
                   {/* Account number */}
                   <div className="bg-brand-bone p-3 rounded-xl border border-brand-peach/50">
-                    <div className="flex items-center justify-between text-xs text-brand-coffee/80 mb-0.5">
+                    <div className="flex items-center justify-between text-xs text-stone-500 mb-0.5">
                       <span>N° de Cuenta:</span>
                       <button
                         onClick={() => copyToClipboard(b.accountNumber, `acc-${i}`)}
-                        className="text-brand-orange hover:text-brand-coffee font-bold flex items-center gap-1"
+                        className="text-brand-orange hover:text-amber-600 font-bold flex items-center gap-1"
                       >
                         {copiedText === `acc-${i}` ? <Check className="w-3.5 h-3.5 text-emerald-600" /> : <Copy className="w-3.5 h-3.5" />}
                         <span>{copiedText === `acc-${i}` ? 'Copiado' : 'Copiar'}</span>
                       </button>
                     </div>
-                    <span className="font-mono font-bold text-sm text-brand-dark">{b.accountNumber}</span>
+                    <span className="font-mono font-bold text-sm text-stone-900">{b.accountNumber}</span>
                   </div>
 
                   {/* CCI */}
                   <div className="bg-brand-bone p-3 rounded-xl border border-brand-peach/50">
-                    <div className="flex items-center justify-between text-xs text-brand-coffee/80 mb-0.5">
+                    <div className="flex items-center justify-between text-xs text-stone-500 mb-0.5">
                       <span>CCI Interbancario:</span>
                       <button
                         onClick={() => copyToClipboard(b.cci, `cci-${i}`)}
-                        className="text-brand-orange hover:text-brand-coffee font-bold flex items-center gap-1"
+                        className="text-brand-orange hover:text-amber-600 font-bold flex items-center gap-1"
                       >
                         {copiedText === `cci-${i}` ? <Check className="w-3.5 h-3.5 text-emerald-600" /> : <Copy className="w-3.5 h-3.5" />}
                         <span>{copiedText === `cci-${i}` ? 'Copiado' : 'Copiar'}</span>
                       </button>
                     </div>
-                    <span className="font-mono font-bold text-xs text-brand-dark">{b.cci}</span>
+                    <span className="font-mono font-bold text-xs text-stone-900">{b.cci}</span>
                   </div>
                 </div>
               ))}
@@ -319,8 +319,8 @@ export default function DonationSection() {
         {activeTab === 'sponsor' && (
           <div className="max-w-5xl mx-auto animate-fadeIn">
             <div className="text-center max-w-xl mx-auto mb-8">
-              <h3 className="text-xl font-bold text-brand-dark">Conviértete en Michi Padrino</h3>
-              <p className="text-xs text-brand-dark/70 mt-1">
+              <h3 className="text-xl font-bold text-stone-900">Conviértete en Michi Padrino</h3>
+              <p className="text-xs text-stone-600 mt-1">
                 Con una suscripción mensual aseguras la alimentación y control sanitario regular de un gatito en proceso de recuperación.
               </p>
             </div>
@@ -336,22 +336,22 @@ export default function DonationSection() {
                   }`}
                 >
                   {plan.popular && (
-                    <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-gradient-to-r from-brand-orange to-brand-coffee text-white text-[10px] font-black uppercase px-3 py-0.5 rounded-full shadow-sm">
+                    <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-gradient-to-r from-brand-orange to-amber-500 text-white text-[10px] font-black uppercase px-3 py-0.5 rounded-full shadow-sm">
                       Más elegido
                     </span>
                   )}
 
                   <div>
-                    <h4 className="text-lg font-bold text-brand-dark mb-1">{plan.title}</h4>
+                    <h4 className="text-lg font-bold text-stone-900 mb-1">{plan.title}</h4>
                     <div className="text-2xl font-black text-brand-orange font-display mb-2">
                       {plan.amount}
                     </div>
-                    <p className="text-xs text-brand-dark/80 mb-4 bg-brand-bone/80 p-2.5 rounded-xl border border-brand-peach/50">
+                    <p className="text-xs text-stone-600 mb-4 bg-brand-bone/80 p-2.5 rounded-xl border border-brand-peach/50">
                       {plan.equivalent}
                     </p>
 
-                    <div className="space-y-2 text-xs text-brand-dark">
-                      <span className="font-bold text-brand-coffee block text-[11px] uppercase tracking-wider">
+                    <div className="space-y-2 text-xs text-stone-700">
+                      <span className="font-bold text-stone-800 block text-[11px] uppercase tracking-wider">
                         Beneficios para el padrino:
                       </span>
                       {plan.benefits.map((b, bIdx) => (
@@ -369,8 +369,8 @@ export default function DonationSection() {
                     rel="noopener noreferrer"
                     className={`mt-6 py-2.5 px-4 rounded-xl text-xs font-bold text-center block transition-all shadow-xs ${
                       plan.popular
-                        ? 'bg-gradient-to-r from-brand-orange to-michi-600 hover:from-michi-600 hover:to-brand-coffee text-white shadow-warm'
-                        : 'bg-brand-dark hover:bg-brand-coffee text-white'
+                        ? 'bg-gradient-to-r from-brand-orange to-amber-500 hover:from-amber-500 hover:to-brand-orange text-white shadow-warm'
+                        : 'bg-stone-900 hover:bg-stone-800 text-white'
                     }`}
                   >
                     Quiero ser Padrino
@@ -386,10 +386,10 @@ export default function DonationSection() {
           <div className="max-w-5xl mx-auto space-y-8 animate-fadeIn">
             {/* Supplies Needed */}
             <div className="bg-brand-bone rounded-3xl p-6 sm:p-8 border border-brand-peach">
-              <h3 className="text-lg font-black text-brand-coffee font-display mb-3 flex items-center gap-2">
+              <h3 className="text-lg font-black text-stone-900 font-display mb-3 flex items-center gap-2">
                 <Package className="w-5 h-5 text-brand-orange" /> Insumos que más necesitamos:
               </h3>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs sm:text-sm text-brand-dark">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs sm:text-sm text-stone-800">
                 {donationAccounts.neededSupplies.map((item, i) => (
                   <div key={i} className="flex items-start gap-2 bg-brand-marfil/90 p-2.5 rounded-xl border border-brand-peach/40">
                     <span className="text-brand-orange font-bold">✓</span>
@@ -401,19 +401,19 @@ export default function DonationSection() {
 
             {/* Dropoff locations */}
             <div>
-              <h3 className="text-xl font-bold text-brand-dark mb-4">Puntos de Acopio en Lima</h3>
+              <h3 className="text-xl font-bold text-stone-900 mb-4">Puntos de Acopio en Lima</h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
                 {donationAccounts.dropoffPoints.map((point, idx) => (
                   <div key={idx} className="bg-brand-marfil p-5 rounded-2xl border border-brand-peach/80 shadow-xs space-y-2">
-                    <span className="text-[10px] font-black uppercase tracking-wider bg-brand-vanilla text-brand-coffee border border-brand-peach/60 px-2 py-0.5 rounded-full">
+                    <span className="text-[10px] font-black uppercase tracking-wider bg-brand-vanilla text-stone-700 border border-brand-peach/60 px-2 py-0.5 rounded-full">
                       {point.district}
                     </span>
-                    <h4 className="font-bold text-sm text-brand-dark">{point.place}</h4>
-                    <p className="text-xs text-brand-dark/80 flex items-start gap-1.5">
+                    <h4 className="font-bold text-sm text-stone-900">{point.place}</h4>
+                    <p className="text-xs text-stone-600 flex items-start gap-1.5">
                       <MapPin className="w-3.5 h-3.5 text-brand-orange shrink-0 mt-0.5" />
                       <span>{point.address}</span>
                     </p>
-                    <p className="text-[11px] text-brand-coffee/80 pt-1 border-t border-brand-peach/40">
+                    <p className="text-[11px] text-stone-500 pt-1 border-t border-brand-peach/40">
                       🕒 {point.schedule}
                     </p>
                   </div>
@@ -430,13 +430,13 @@ export default function DonationSection() {
               <Globe className="w-8 h-8" />
             </div>
             <div>
-              <h3 className="text-2xl font-black text-brand-dark font-display">Donaciones desde el Extranjero</h3>
-              <p className="text-xs sm:text-sm text-brand-dark/70 mt-1 max-w-sm mx-auto">
+              <h3 className="text-2xl font-black text-stone-900 font-display">Donaciones desde el Extranjero</h3>
+              <p className="text-xs sm:text-sm text-stone-600 mt-1 max-w-sm mx-auto">
                 Si vives fuera de Perú, puedes apoyarnos de forma 100% segura con tarjeta de crédito o saldo a través de PayPal.
               </p>
             </div>
 
-            <div className="bg-brand-bone p-3 rounded-2xl border border-brand-peach/60 text-xs text-brand-dark">
+            <div className="bg-brand-bone p-3 rounded-2xl border border-brand-peach/60 text-xs text-stone-800">
               <strong>Email de PayPal:</strong> {donationAccounts.paypal.email}
             </div>
 

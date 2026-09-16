@@ -5,7 +5,7 @@ import SocialIcon from './SocialIcon';
 
 export default function Footer() {
   return (
-    <footer className="bg-brand-dark text-stone-300 pt-16 pb-12 border-t-4 border-brand-orange relative overflow-hidden">
+    <footer className="bg-stone-900 text-stone-300 pt-16 pb-12 border-t-4 border-brand-orange relative overflow-hidden">
       {/* Glow subtle background */}
       <div className="absolute top-0 right-1/4 w-96 h-96 bg-brand-orange/10 rounded-full blur-3xl pointer-events-none" />
 
@@ -27,7 +27,7 @@ export default function Footer() {
                   <span className="text-2xl font-black text-white tracking-tight leading-none font-display">
                     misicha
                   </span>
-                  <span className="bg-gradient-to-r from-brand-orange to-brand-coffee text-white text-[10px] font-black uppercase px-1.5 py-0.5 rounded">
+                  <span className="bg-gradient-to-r from-brand-orange to-amber-500 text-white text-[10px] font-black uppercase px-1.5 py-0.5 rounded">
                     PERÚ
                   </span>
                 </div>

@@ -30,7 +30,7 @@ export default function Navbar({ onOpenAdoptionFilter, onOpenBingoModal }) {
     <header className="sticky top-0 z-50 transition-all duration-300">
       {/* Top Banner for Michi Bingo */}
       {showTopBar && (
-        <div className="bg-gradient-to-r from-brand-orange via-orange-600 to-brand-coffee text-white text-xs sm:text-sm font-medium py-2 px-4 shadow-sm relative">
+        <div className="bg-gradient-to-r from-brand-orange to-amber-500 text-white text-xs sm:text-sm font-medium py-2 px-4 shadow-sm relative">
           <div className="max-w-7xl mx-auto flex items-center justify-between">
             <div className="flex items-center gap-2 mx-auto sm:mx-0 overflow-hidden text-center sm:text-left">
               <span className="bg-white/20 px-2 py-0.5 rounded-full text-[11px] font-bold uppercase tracking-wider flex items-center gap-1 shrink-0 text-brand-vanilla">
@@ -76,14 +76,14 @@ export default function Navbar({ onOpenAdoptionFilter, onOpenBingoModal }) {
               />
               <div className="flex flex-col">
                 <div className="flex items-center gap-1.5">
-                  <span className="text-xl sm:text-2xl font-black text-brand-dark tracking-tight leading-none font-display">
+                  <span className="text-xl sm:text-2xl font-black text-stone-900 tracking-tight leading-none font-display">
                     misicha
                   </span>
-                  <span className="bg-gradient-to-r from-brand-orange to-brand-coffee text-white text-[10px] font-extrabold uppercase px-1.5 py-0.5 rounded shadow-sm">
+                  <span className="bg-gradient-to-r from-brand-orange to-amber-500 text-white text-[10px] font-extrabold uppercase px-1.5 py-0.5 rounded shadow-sm">
                     PERÚ
                   </span>
                 </div>
-                <span className="text-[11px] sm:text-xs text-brand-coffee font-semibold tracking-wider uppercase">
+                <span className="text-[11px] sm:text-xs text-stone-500 font-semibold tracking-wider uppercase">
                   Asociación Civil Pro-Gatitos
                 </span>
               </div>
@@ -98,13 +98,13 @@ export default function Navbar({ onOpenAdoptionFilter, onOpenBingoModal }) {
                   className={`px-3 py-2 rounded-xl text-sm font-semibold transition-all relative flex items-center gap-1.5 ${
                     link.highlight
                       ? 'text-brand-orange bg-brand-bone hover:bg-brand-vanilla/50 font-bold border border-brand-peach/80'
-                      : 'text-brand-dark hover:text-brand-orange hover:bg-brand-bone/60'
+                      : 'text-stone-700 hover:text-brand-orange hover:bg-brand-bone/60'
                   }`}
                 >
                   {link.highlight && <Sparkles className="w-3.5 h-3.5 text-brand-orange animate-spin-slow" />}
                   {link.name}
                   {link.badge && (
-                    <span className="bg-brand-vanilla text-brand-coffee text-[10px] font-black px-1.5 py-0.5 rounded-full border border-brand-peach/60">
+                    <span className="bg-brand-vanilla text-brand-orange text-[10px] font-black px-1.5 py-0.5 rounded-full border border-brand-peach/60">
                       {link.badge}
                     </span>
                   )}
@@ -116,7 +116,7 @@ export default function Navbar({ onOpenAdoptionFilter, onOpenBingoModal }) {
             <div className="hidden sm:flex items-center gap-2.5">
               <a
                 href="#donaciones"
-                className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs sm:text-sm font-bold text-brand-dark bg-brand-bone hover:bg-brand-peach border border-brand-peach transition-all shadow-sm"
+                className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs sm:text-sm font-bold text-stone-800 bg-brand-bone hover:bg-brand-peach border border-brand-peach transition-all shadow-sm"
               >
                 <Heart className="w-4 h-4 text-brand-orange fill-brand-orange" />
                 <span>Donar / Yape</span>
@@ -124,7 +124,7 @@ export default function Navbar({ onOpenAdoptionFilter, onOpenBingoModal }) {
 
               <a
                 href="#adopciones"
-                className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl text-xs sm:text-sm font-bold text-white bg-gradient-to-r from-brand-orange to-michi-600 hover:from-michi-600 hover:to-brand-coffee shadow-warm hover:shadow-warm-lg transition-all transform hover:-translate-y-0.5"
+                className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl text-xs sm:text-sm font-bold text-white bg-gradient-to-r from-brand-orange to-michi-600 hover:from-michi-600 hover:to-brand-orange shadow-warm hover:shadow-warm-lg transition-all transform hover:-translate-y-0.5"
               >
                 <PawPrint className="w-4 h-4" />
                 <span>Adoptar</span>
@@ -135,14 +135,14 @@ export default function Navbar({ onOpenAdoptionFilter, onOpenBingoModal }) {
             <div className="flex lg:hidden items-center gap-2">
               <a
                 href="#donaciones"
-                className="inline-flex sm:hidden items-center gap-1 px-2.5 py-1.5 rounded-lg text-xs font-bold text-white bg-gradient-to-r from-brand-orange to-brand-coffee shadow-sm"
+                className="inline-flex sm:hidden items-center gap-1 px-2.5 py-1.5 rounded-lg text-xs font-bold text-white bg-gradient-to-r from-brand-orange to-amber-500 shadow-sm"
               >
                 <Heart className="w-3.5 h-3.5 fill-white" />
                 <span>Donar</span>
               </a>
               <button
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                className="p-2 rounded-xl text-brand-dark hover:text-brand-orange hover:bg-brand-bone transition-colors"
+                className="p-2 rounded-xl text-stone-700 hover:text-brand-orange hover:bg-brand-bone transition-colors"
                 aria-label="Abrir menú"
               >
                 {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -162,7 +162,7 @@ export default function Navbar({ onOpenAdoptionFilter, onOpenBingoModal }) {
                 className={`flex items-center justify-between px-3.5 py-2.5 rounded-xl text-base font-semibold transition-colors ${
                   link.highlight
                     ? 'bg-brand-bone text-brand-orange font-bold border border-brand-peach/60'
-                    : 'text-brand-dark hover:bg-brand-bone hover:text-brand-orange'
+                    : 'text-stone-700 hover:bg-brand-bone hover:text-brand-orange'
                 }`}
               >
                 <span className="flex items-center gap-2">
@@ -170,7 +170,7 @@ export default function Navbar({ onOpenAdoptionFilter, onOpenBingoModal }) {
                   {link.name}
                 </span>
                 {link.badge ? (
-                  <span className="bg-brand-vanilla text-brand-coffee text-xs font-bold px-2 py-0.5 rounded-full border border-brand-peach/60">
+                  <span className="bg-brand-vanilla text-brand-orange text-xs font-bold px-2 py-0.5 rounded-full border border-brand-peach/60">
                     {link.badge}
                   </span>
                 ) : (
@@ -191,7 +191,7 @@ export default function Navbar({ onOpenAdoptionFilter, onOpenBingoModal }) {
               <a
                 href="#donaciones"
                 onClick={() => setMobileMenuOpen(false)}
-                className="w-full flex items-center justify-center gap-2 py-3 px-4 rounded-xl text-brand-dark font-bold bg-brand-bone hover:bg-brand-peach border border-brand-peach text-center"
+                className="w-full flex items-center justify-center gap-2 py-3 px-4 rounded-xl text-stone-800 font-bold bg-brand-bone hover:bg-brand-peach border border-brand-peach text-center"
               >
                 <Heart className="w-4 h-4 text-brand-orange fill-brand-orange" />
                 Yapear o Donar a Misicha

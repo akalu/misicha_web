@@ -55,24 +55,24 @@ export default function BingoSection() {
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto space-y-4 mb-16">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand-vanilla text-brand-dark border border-brand-peach text-xs font-black uppercase tracking-widest shadow-xs">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand-vanilla text-stone-800 border border-brand-peach text-xs font-black uppercase tracking-widest shadow-xs">
             <Sparkles className="w-3.5 h-3.5 text-brand-orange" />
             <span>Recaudación de Fondos & Eventos</span>
           </div>
 
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-brand-dark tracking-tight font-display">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-stone-900 tracking-tight font-display">
             Gran Michi Bingo Solidario <br className="hidden sm:inline" />
             & Actividades Felinas
           </h2>
 
-          <p className="text-base sm:text-lg text-brand-coffee">
+          <p className="text-base sm:text-lg text-stone-600">
             Nuestros eventos y rifas son el corazón que financia la atención veterinaria, cirugías de esterilización y alimento de decenas de gatitos en Lima. ¡Juega, gana y sé parte del cambio!
           </p>
         </div>
 
         {/* Featured Bingo Master Card */}
         <div className="bg-[#FFFCF7] rounded-3xl border-2 border-brand-peach shadow-xl overflow-hidden mb-16">
-          <div className="bg-gradient-to-r from-brand-orange via-michi-600 to-brand-coffee p-6 sm:p-8 text-white">
+          <div className="bg-gradient-to-r from-brand-orange to-amber-500 p-6 sm:p-8 text-white">
             <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
               
               <div className="space-y-2">
@@ -131,10 +131,10 @@ export default function BingoSection() {
             {/* Left Column: Premios Destacados */}
             <div className="lg:col-span-7 space-y-6">
               <div className="flex items-center justify-between">
-                <h4 className="text-xl font-black text-brand-dark font-display flex items-center gap-2">
+                <h4 className="text-xl font-black text-stone-900 font-display flex items-center gap-2">
                   <Trophy className="w-5 h-5 text-brand-orange" /> Premios en Juego
                 </h4>
-                <span className="text-xs text-brand-coffee font-semibold">+ de S/ 3,500 en premios</span>
+                <span className="text-xs text-stone-500 font-semibold">+ de S/ 3,500 en premios</span>
               </div>
 
               <div className="space-y-3">
@@ -161,14 +161,14 @@ export default function BingoSection() {
                         <span className="text-[11px] font-extrabold uppercase text-brand-orange block">
                           {prize.place}
                         </span>
-                        <p className="text-xs sm:text-sm font-bold text-brand-dark">
+                        <p className="text-xs sm:text-sm font-bold text-stone-900">
                           {prize.title}
                         </p>
                       </div>
                     </div>
 
                     <div className="text-right shrink-0">
-                      <span className="text-xs sm:text-sm font-black text-brand-dark bg-white px-2.5 py-1 rounded-lg border border-brand-peach/60 shadow-2xs">
+                      <span className="text-xs sm:text-sm font-black text-stone-800 bg-white px-2.5 py-1 rounded-lg border border-brand-peach/60 shadow-2xs">
                         Valor {prize.val}
                       </span>
                     </div>
@@ -177,11 +177,11 @@ export default function BingoSection() {
               </div>
 
               {/* Bingo Guidelines */}
-              <div className="bg-brand-bone/80 border border-brand-peach/80 rounded-2xl p-4 text-xs text-brand-dark space-y-1.5">
-                <h5 className="font-bold text-brand-coffee flex items-center gap-1.5">
+              <div className="bg-brand-bone/80 border border-brand-peach/80 rounded-2xl p-4 text-xs text-stone-800 space-y-1.5">
+                <h5 className="font-bold text-stone-900 flex items-center gap-1.5">
                   <CheckCircle2 className="w-4 h-4 text-brand-orange" /> ¿Cómo se juega el Michi Bingo?
                 </h5>
-                <ul className="space-y-1 text-brand-coffee list-disc list-inside">
+                <ul className="space-y-1 text-stone-600 list-disc list-inside">
                   {featuredBingo.rules.map((rule, rIdx) => (
                     <li key={rIdx}>{rule}</li>
                   ))}
@@ -192,13 +192,13 @@ export default function BingoSection() {
             {/* Right Column: Ticket Reservation Simulator */}
             <div className="lg:col-span-5 bg-brand-bone rounded-2xl p-6 border border-brand-peach flex flex-col justify-between shadow-xs">
               <div>
-                <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-brand-vanilla text-brand-dark border border-brand-peach/60 text-xs font-bold uppercase mb-2">
+                <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-brand-vanilla text-stone-800 border border-brand-peach/60 text-xs font-bold uppercase mb-2">
                   <Sparkles className="w-3.5 h-3.5 text-brand-orange" /> Adquiere tus cartones
                 </div>
-                <h4 className="text-xl font-black text-brand-dark font-display">
+                <h4 className="text-xl font-black text-stone-900 font-display">
                   Calculadora & Reserva de Cartones
                 </h4>
-                <p className="text-xs text-brand-coffee mt-1">
+                <p className="text-xs text-stone-600 mt-1">
                   Elige la cantidad de cartones que deseas jugar y apoya directamente a los gatos del refugio.
                 </p>
 
@@ -210,7 +210,7 @@ export default function BingoSection() {
                     className={`p-2.5 rounded-xl text-center border transition-all ${
                       ticketCount === 1
                         ? 'bg-brand-orange text-white border-brand-orange shadow-warm font-bold'
-                        : 'bg-[#FFFCF7] text-brand-dark border-brand-peach/60 hover:border-brand-peach font-semibold'
+                        : 'bg-[#FFFCF7] text-stone-800 border-brand-peach/60 hover:border-brand-peach font-semibold'
                     }`}
                   >
                     <span className="block text-xs">1 Cartón</span>
@@ -223,7 +223,7 @@ export default function BingoSection() {
                     className={`p-2.5 rounded-xl text-center border relative transition-all ${
                       ticketCount === 3
                         ? 'bg-brand-orange text-white border-brand-orange shadow-warm font-bold'
-                        : 'bg-[#FFFCF7] text-brand-dark border-brand-peach/60 hover:border-brand-peach font-semibold'
+                        : 'bg-[#FFFCF7] text-stone-800 border-brand-peach/60 hover:border-brand-peach font-semibold'
                     }`}
                   >
                     <span className="absolute -top-2 left-1/2 -translate-x-1/2 bg-brand-orange text-white text-[9px] font-black px-1.5 py-0.2 rounded-full uppercase">
@@ -239,10 +239,10 @@ export default function BingoSection() {
                     className={`p-2.5 rounded-xl text-center border relative transition-all ${
                       ticketCount === 5
                         ? 'bg-brand-orange text-white border-brand-orange shadow-warm font-bold'
-                        : 'bg-[#FFFCF7] text-brand-dark border-brand-peach/60 hover:border-brand-peach font-semibold'
+                        : 'bg-[#FFFCF7] text-stone-800 border-brand-peach/60 hover:border-brand-peach font-semibold'
                     }`}
                   >
-                    <span className="absolute -top-2 left-1/2 -translate-x-1/2 bg-brand-coffee text-white text-[9px] font-black px-1.5 py-0.2 rounded-full uppercase">
+                    <span className="absolute -top-2 left-1/2 -translate-x-1/2 bg-amber-600 text-white text-[9px] font-black px-1.5 py-0.2 rounded-full uppercase">
                       Super Ahorro
                     </span>
                     <span className="block text-xs">5 Cartones</span>
@@ -252,22 +252,22 @@ export default function BingoSection() {
 
                 {/* Counter buttons */}
                 <div className="flex items-center justify-between bg-[#FFFCF7] rounded-xl p-3 border border-brand-peach/60 mt-4">
-                  <span className="text-xs font-bold text-brand-dark">Cantidad personalizada:</span>
+                  <span className="text-xs font-bold text-stone-800">Cantidad personalizada:</span>
                   <div className="flex items-center gap-3">
                     <button
                       type="button"
                       onClick={() => setTicketCount(Math.max(1, ticketCount - 1))}
-                      className="w-8 h-8 rounded-lg bg-brand-bone hover:bg-brand-peach/40 text-brand-dark font-bold flex items-center justify-center text-base"
+                      className="w-8 h-8 rounded-lg bg-brand-bone hover:bg-brand-peach/40 text-stone-800 font-bold flex items-center justify-center text-base"
                     >
                       -
                     </button>
-                    <span className="text-base font-black text-brand-dark w-6 text-center">
+                    <span className="text-base font-black text-stone-900 w-6 text-center">
                       {ticketCount}
                     </span>
                     <button
                       type="button"
                       onClick={() => setTicketCount(ticketCount + 1)}
-                      className="w-8 h-8 rounded-lg bg-brand-bone hover:bg-brand-peach/40 text-brand-dark font-bold flex items-center justify-center text-base"
+                      className="w-8 h-8 rounded-lg bg-brand-bone hover:bg-brand-peach/40 text-stone-800 font-bold flex items-center justify-center text-base"
                     >
                       +
                     </button>
@@ -277,7 +277,7 @@ export default function BingoSection() {
                 {/* Total price highlight */}
                 <div className="mt-4 p-4 rounded-xl bg-brand-vanilla/60 border border-brand-peach flex items-center justify-between">
                   <div>
-                    <span className="text-xs text-brand-coffee block">Total a pagar:</span>
+                    <span className="text-xs text-stone-600 block">Total a pagar:</span>
                     <span className="text-2xl font-black text-brand-orange font-display">
                       S/ {totalAmount}.00 Soles
                     </span>
@@ -316,7 +316,7 @@ export default function BingoSection() {
                         required
                         value={buyerName}
                         onChange={(e) => setBuyerName(e.target.value)}
-                        className="w-full px-3 py-2 rounded-xl border border-brand-peach/60 text-xs focus:ring-2 focus:ring-brand-orange bg-[#FFFCF7] text-brand-dark"
+                        className="w-full px-3 py-2 rounded-xl border border-brand-peach/60 text-xs focus:ring-2 focus:ring-brand-orange bg-[#FFFCF7] text-stone-900"
                       />
                     </div>
                     <div>
@@ -326,7 +326,7 @@ export default function BingoSection() {
                         required
                         value={buyerPhone}
                         onChange={(e) => setBuyerPhone(e.target.value)}
-                        className="w-full px-3 py-2 rounded-xl border border-brand-peach/60 text-xs focus:ring-2 focus:ring-brand-orange bg-[#FFFCF7] text-brand-dark"
+                        className="w-full px-3 py-2 rounded-xl border border-brand-peach/60 text-xs focus:ring-2 focus:ring-brand-orange bg-[#FFFCF7] text-stone-900"
                       />
                     </div>
 
@@ -341,7 +341,7 @@ export default function BingoSection() {
               </div>
 
               {/* Payment channels hint */}
-              <p className="text-[11px] text-brand-coffee text-center mt-3">
+              <p className="text-[11px] text-stone-500 text-center mt-3">
                 Aceptamos <strong>Yape</strong>, <strong>BCP</strong> e <strong>Interbank</strong>.
               </p>
             </div>
@@ -355,7 +355,7 @@ export default function BingoSection() {
             <span className="text-xs font-bold uppercase tracking-wider text-brand-orange">
               Más Maneras de Apoyar
             </span>
-            <h3 className="text-2xl sm:text-3xl font-black text-brand-dark font-display mt-1">
+            <h3 className="text-2xl sm:text-3xl font-black text-stone-900 font-display mt-1">
               Ferias, Rifas & Tiendita Solidaria
             </h3>
           </div>
@@ -371,21 +371,21 @@ export default function BingoSection() {
                     <span className={`text-[10px] font-extrabold uppercase px-2.5 py-1 rounded-full ${act.badgeColor}`}>
                       {act.tag}
                     </span>
-                    <span className="text-xs text-brand-coffee/70 font-medium">
+                    <span className="text-xs text-stone-400 font-medium">
                       {act.type}
                     </span>
                   </div>
 
-                  <h4 className="text-lg font-bold text-brand-dark mb-2">
+                  <h4 className="text-lg font-bold text-stone-900 mb-2">
                     {act.title}
                   </h4>
 
-                  <p className="text-xs text-brand-coffee leading-relaxed mb-4">
+                  <p className="text-xs text-stone-600 leading-relaxed mb-4">
                     {act.description}
                   </p>
                 </div>
 
-                <div className="pt-3 border-t border-brand-peach/40 space-y-1.5 text-xs text-brand-coffee">
+                <div className="pt-3 border-t border-brand-peach/40 space-y-1.5 text-xs text-stone-500">
                   <div className="flex items-center gap-2">
                     <Calendar className="w-3.5 h-3.5 text-brand-orange" />
                     <span>{act.date}</span>

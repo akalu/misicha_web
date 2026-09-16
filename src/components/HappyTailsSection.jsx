@@ -9,17 +9,17 @@ export default function HappyTailsSection() {
         
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto space-y-4 mb-14">
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-brand-bone border border-brand-peach text-brand-coffee text-xs font-bold uppercase tracking-wider">
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-brand-bone border border-brand-peach text-stone-700 text-xs font-bold uppercase tracking-wider">
             <Sparkles className="w-3.5 h-3.5 text-brand-orange" />
             <span>Historias que Inspiran</span>
           </div>
 
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-brand-dark tracking-tight font-display">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-stone-900 tracking-tight font-display">
             Finales Felices: <br className="hidden sm:inline" />
             Vidas transformadas para siempre
           </h2>
 
-          <p className="text-base text-brand-dark/80">
+          <p className="text-base text-stone-600">
             Cada michi adoptado deja un espacio libre en el refugio para que podamos rescatar a otro en peligro. Conoce algunas historias de familias que abrieron sus corazones.
           </p>
         </div>
@@ -39,7 +39,7 @@ export default function HappyTailsSection() {
                     alt={item.catName}
                     className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
                   />
-                  <div className="absolute top-3 left-3 bg-brand-marfil/95 backdrop-blur-xs px-3 py-1 rounded-full text-[11px] font-black text-brand-coffee shadow-xs flex items-center gap-1 border border-brand-peach/50">
+                  <div className="absolute top-3 left-3 bg-brand-marfil/95 backdrop-blur-xs px-3 py-1 rounded-full text-[11px] font-black text-stone-800 shadow-xs flex items-center gap-1 border border-brand-peach/50">
                     <Heart className="w-3 h-3 text-brand-orange fill-brand-orange" />
                     <span>{item.badge}</span>
                   </div>
@@ -53,7 +53,7 @@ export default function HappyTailsSection() {
                     ))}
                   </div>
 
-                  <p className="text-xs sm:text-sm text-brand-dark/80 italic leading-relaxed relative">
+                  <p className="text-xs sm:text-sm text-stone-600 italic leading-relaxed relative">
                     "{item.quote}"
                   </p>
                 </div>
@@ -62,10 +62,10 @@ export default function HappyTailsSection() {
               {/* Adopter info */}
               <div className="p-6 pt-0 border-t border-brand-peach/40 mt-4 flex items-center justify-between">
                 <div>
-                  <h4 className="font-bold text-sm text-brand-dark">{item.catName}</h4>
-                  <p className="text-[11px] text-brand-coffee/80">{item.adopter} • {item.district}</p>
+                  <h4 className="font-bold text-sm text-stone-900">{item.catName}</h4>
+                  <p className="text-[11px] text-stone-500">{item.adopter} • {item.district}</p>
                 </div>
-                <span className="text-[10px] font-semibold text-brand-coffee bg-brand-vanilla border border-brand-peach/60 px-2 py-0.5 rounded-full">
+                <span className="text-[10px] font-semibold text-stone-700 bg-brand-vanilla border border-brand-peach/60 px-2 py-0.5 rounded-full">
                   {item.timeAdopted}
                 </span>
               </div>
@@ -79,7 +79,7 @@ export default function HappyTailsSection() {
             href="https://wa.me/51954778917?text=Hola%20Misicha%2C%20quisiera%20compartir%20fotos%20y%20la%20historia%20de%20mi%20michi%20adoptado%20para%20sus%20redes."
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 text-xs sm:text-sm font-bold text-brand-coffee hover:text-brand-orange transition-colors"
+            className="inline-flex items-center gap-2 text-xs sm:text-sm font-bold text-stone-700 hover:text-brand-orange transition-colors"
           >
             <Camera className="w-4 h-4 text-brand-orange" />
             <span>¿Adoptaste con nosotros? ¡Comparte tu historia para inspirar a más personas! →</span>
