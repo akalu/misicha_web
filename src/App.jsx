@@ -3,6 +3,7 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import AdoptionSection from './components/AdoptionSection';
 import AllCatsView from './components/AllCatsView';
+import AdoptedCatsView from './components/AdoptedCatsView';
 import BingoSection from './components/BingoSection';
 import DonationSection from './components/DonationSection';
 import AboutSection from './components/AboutSection';
@@ -13,12 +14,14 @@ import Footer from './components/Footer';
 import { Phone, Heart, Sparkles } from 'lucide-react';
 
 function App() {
-  const [currentView, setCurrentView] = useState('home'); // 'home' or 'catalog'
+  const [currentView, setCurrentView] = useState('home'); // 'home' | 'catalog' | 'adopted'
 
   useEffect(() => {
     const checkHash = () => {
       if (window.location.hash === '#catalogo' || window.location.hash === '#todos-los-gatitos') {
         setCurrentView('catalog');
+      } else if (window.location.hash === '#adoptados' || window.location.hash === '#gatitos-adoptados') {
+        setCurrentView('adopted');
       } else {
         setCurrentView('home');
       }
@@ -34,8 +37,19 @@ function App() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
-  const returnToHome = () => {
+  const openAdoptedCats = () => {
+    window.location.hash = '#adoptados';
+    setCurrentView('adopted');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  const returnToHomeFromCatalog = () => {
     window.location.hash = '#adopciones';
+    setCurrentView('home');
+  };
+
+  const returnToHomeFromAdopted = () => {
+    window.location.hash = '#historias';
     setCurrentView('home');
   };
 
@@ -47,7 +61,9 @@ function App() {
       {/* Main Content Sections */}
       <main className="flex-grow">
         {currentView === 'catalog' ? (
-          <AllCatsView onBack={returnToHome} />
+          <AllCatsView onBack={returnToHomeFromCatalog} />
+        ) : currentView === 'adopted' ? (
+          <AdoptedCatsView onBack={returnToHomeFromAdopted} onOpenCatalog={openFullCatalog} />
         ) : (
           <>
             {/* 1. Hero Section */}
@@ -66,7 +82,7 @@ function App() {
             <AboutSection />
 
             {/* 6. Success Stories / Finales Felices */}
-            <HappyTailsSection />
+            <HappyTailsSection onOpenAdoptedCats={openAdoptedCats} />
 
             {/* 7. Volunteer & Foster Home (Hogares temporales) */}
             <VolunteerSection />

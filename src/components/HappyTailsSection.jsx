@@ -1,8 +1,8 @@
 import React from 'react';
 import { testimonialsData } from '../data/testimonialsData';
-import { Heart, Star, Quote, Sparkles, Camera } from 'lucide-react';
+import { Heart, Star, Sparkles, Camera, ArrowRight, CheckCircle2 } from 'lucide-react';
 
-export default function HappyTailsSection() {
+export default function HappyTailsSection({ onOpenAdoptedCats }) {
   return (
     <section id="historias" className="py-16 sm:py-24 bg-brand-marfil relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -33,11 +33,12 @@ export default function HappyTailsSection() {
             >
               <div>
                 {/* Photo */}
-                <div className="relative h-56 overflow-hidden">
+                <div className="relative h-60 overflow-hidden bg-stone-100">
                   <img
                     src={item.image}
                     alt={item.catName}
                     className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                    loading="lazy"
                   />
                   <div className="absolute top-3 left-3 bg-brand-marfil/95 backdrop-blur-xs px-3 py-1 rounded-full text-[11px] font-black text-stone-800 shadow-xs flex items-center gap-1 border border-brand-peach/50">
                     <Heart className="w-3 h-3 text-brand-orange fill-brand-orange" />
@@ -73,17 +74,41 @@ export default function HappyTailsSection() {
           ))}
         </div>
 
-        {/* Send your story CTA */}
-        <div className="mt-12 text-center">
-          <a
-            href="https://wa.me/51954778917?text=Hola%20Misicha%2C%20quisiera%20compartir%20fotos%20y%20la%20historia%20de%20mi%20michi%20adoptado%20para%20sus%20redes."
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 text-xs sm:text-sm font-bold text-stone-700 hover:text-brand-orange transition-colors"
-          >
-            <Camera className="w-4 h-4 text-brand-orange" />
-            <span>¿Adoptaste con nosotros? ¡Comparte tu historia para inspirar a más personas! →</span>
-          </a>
+        {/* CTA Banner with Button to View All Adopted Cats */}
+        <div className="mt-14 p-6 sm:p-8 rounded-3xl bg-brand-bone border border-brand-peach/80 flex flex-col md:flex-row items-center justify-between gap-6">
+          <div className="space-y-1 text-center md:text-left">
+            <div className="inline-flex items-center gap-1 text-xs font-black text-emerald-700 bg-emerald-100 border border-emerald-300 px-2.5 py-0.5 rounded-full mb-1">
+              <CheckCircle2 className="w-3.5 h-3.5" />
+              <span>22+ Vidas Felinas a Salvo</span>
+            </div>
+            <h3 className="text-xl sm:text-2xl font-black text-stone-900 font-display">
+              Muro de Honor de Gatitos Adoptados
+            </h3>
+            <p className="text-xs sm:text-sm text-stone-600 max-w-xl">
+              Explora nuestra galería de michis graduados que pasaron de las calles de Lima a hogares llenos de amor y seguridad.
+            </p>
+          </div>
+
+          <div className="flex flex-col sm:flex-row items-center gap-3 w-full md:w-auto shrink-0">
+            <button
+              onClick={onOpenAdoptedCats}
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-2xl bg-gradient-to-r from-brand-orange to-amber-500 hover:from-michi-600 hover:to-brand-orange text-white font-black text-sm shadow-warm hover:shadow-warm-lg transition-all duration-300 transform hover:-translate-y-0.5"
+            >
+              <Heart className="w-4 h-4 fill-white" />
+              <span>Ver a los gatitos adoptados</span>
+              <ArrowRight className="w-4 h-4" />
+            </button>
+
+            <a
+              href="https://wa.me/51954778917?text=Hola%20Misicha%2C%20quisiera%20compartir%20fotos%20y%20la%20historia%20de%20mi%20michi%20adoptado%20para%20sus%20redes."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-2xl bg-brand-marfil hover:bg-brand-peach/40 text-stone-700 hover:text-stone-900 font-bold text-xs sm:text-sm border border-brand-peach transition-all"
+            >
+              <Camera className="w-4 h-4 text-brand-orange" />
+              <span>Comparte tu historia</span>
+            </a>
+          </div>
         </div>
 
       </div>
